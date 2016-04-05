@@ -5,12 +5,32 @@
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
+\usepackage{tcolorbox}
+
+%\usepackage{minted}
+%\usemintedstyle{trac}
 
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
 
 \usepackage{xspace}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+
+\usepackage{subfig}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{tikz}
+
+\usepackage{mathtools}
+
+\newcommand{\verteq}{\rotatebox{90}{$\,=$}}
+\newcommand{\equalto}[2]{\underset{\scriptstyle\overset{\mkern4mu\huge \verteq}{#2}}{#1}}
+
+
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ket}[1]{\left| #1\right\rangle}
+\newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
+\newcommand{\avg}[1]{\left< #1 \right>}
 
 
 
@@ -152,15 +172,6 @@ UNM}
 
 
 
-\begin{frame}[fragile]{Neutrino Particle}
-
-
-Neutrino as a particle
-  
-  
-\end{frame}
-
-
 
 
 %%%% Neutrino as a Particle
@@ -214,15 +225,123 @@ Neutrino as a particle
 
 
 
+
+\begin{figure}
+  \centering
+{\includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{assets/neutrino-oscillations-illustration.png} }
+%http://profmattstrassler.com/articles-and-posts/particle-physics-basics/neutrinos/neutrino-types-and-neutrino-oscillations/
+\vfill
+\pause
+{
+\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/oscillations-three-flavor.eps}
+}
+\caption{Neutrino oscillation. Source: Neutrino\_oscillation@Wikipedia \textbf{SHOULD CHANGE TO A CUSTOMIZED FIGURE} }
+
+\end{figure}
+
+
+
 \end{frame}
 
 
 
-\begin{frame}{What is neutrino?}
+\begin{frame}{What is neutrino oscillation?}
+
+
+\setcounter{figure}{\thefigure-1}  
+\begin{figure}
+  \centering
+{\includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{assets/neutrino-oscillations-illustration.png} }
+%http://profmattstrassler.com/articles-and-posts/particle-physics-basics/neutrinos/neutrino-types-and-neutrino-oscillations/
+\vfill
+{
+\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/oscillations-three-flavor.eps}
+}
+\caption{Neutrino oscillation. Source: Neutrino\_oscillation@Wikipedia \textbf{SHOULD CHANGE TO A CUSTOMIZED FIGURE} }
+
+\end{figure}
+
+
+\begin{textblock*}{64mm}(32mm,0.4\textheight)
+
+\metroset{block=fill}
+\begin{alertblock}
+\centering
+\begin{equation*}
+  \equalto{\textbf{\large Neutrino Oscillations} }{ \textbf{\large Neutrino Flavor Conversion } }
+\end{equation*}
+  
+\end{alertblock}
+\end{textblock*}
+
+
+\end{frame}
+
+
+
+
+%%%%%% Why Neutrinos Oscillate? %%%%%%%%%
+
+
+\begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
+
+
+  
+\begin{tcolorbox}[title=What if flavor eigenstates are the energy eigenstates?]
+The initial condition $\ket{\Psi(t=0)}=\ket{\nu_e}$ with eigen energy $E_1$. Then the state at any time is
+
+\begin{equation*}
+\ket{\Psi(t)} = \ket{\nu_e} e^{-iE_1 t}.
+\end{equation*}
+
+Survival probability for electron flavor neutrino is
+
+\begin{align*}
+&\phantom{=} P(\ket{\nu_e}\to\ket{\nu_e}) \\
+& = \lvert \braket{\nu_e}{\psi(t)} \rvert ^2 \\
+& = 1
+\end{align*}
+
+\end{tcolorbox}
 
 
 
 \end{frame}
+
+
+
+\begin{frame}[fragile]
+  \frametitle{Nature of Neutrino Oscillation}
+
+\begin{tcolorbox}[title=What is the cause of oscillation?]
+As long as flavor eigenstates are NOT energy eigenstates, neutrino oscillations can happen.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Basis]
+\begin{description}
+\item[Energy Eigenstates] Diagonalized Hamiltonian
+\item[Flavor Eigenstates] Eigenstates of weak interaction
+\end{description}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Mixing Angle and Eigenenergies]
+\alert{Change mixing angles $\to$ change mixing amplitude\\
+Change energy eigenstates $\to$ mixing frequency}
+
+\begin{equation*}
+P(\ket{\nu_e}\to\ket{\nu_x})  = \frac{1}{2} \sin^2(2\theta) (1- \cos ( \Delta E t ) )
+\end{equation*}
+\end{tcolorbox}
+
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% The Original Slides as Examples %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
