@@ -21,6 +21,14 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{tikz}
 
+
+
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usetikzlibrary{arrows,shapes}
+
+
 \usepackage{mathtools}
 
 \newcommand{\verteq}{\rotatebox{90}{$\,=$}}
@@ -31,6 +39,8 @@
 \newcommand{\ket}[1]{\left| #1\right\rangle}
 \newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
 \newcommand{\avg}[1]{\left< #1 \right>}
+
+\newcommand{\ii}{\mathrm{i}}
 
 
 
@@ -140,12 +150,13 @@ UNM}
 
 \begin{frame}{Table of Contents}
   \setbeamertemplate{section in toc}[sections numbered]
-  \tableofcontents[hideallsubsections]
+  \tableofcontents
 \end{frame}
 
 \section{Introduction}
 
 
+\subsection{History of Neutrinos}
 
 \begin{frame}[fragile]{Neutrino Timeline}
 
@@ -175,6 +186,7 @@ UNM}
 
 
 %%%% Neutrino as a Particle
+\subsection{What is neutrino?}
 
 \begin{frame}{What is neutrino?}
 
@@ -202,13 +214,31 @@ UNM}
 \end{column}
 
 \begin{column}{0.4\textwidth}
-    \begin{itemize}[<+->]
-    \item[] 
+
+
+    \begin{itemize}
     \item[] Neutrinos are
     \item Fermions,
     \item electrically neutral,
     \item \textbf{light}.
     \end{itemize}
+
+
+
+\only<1-1>{
+\begin{figure}
+\includegraphics[width=\textwidth]{assets/neutrino-normal-hierarchy.png}
+\caption*{Olga Mena \& Stephen Parke, 2004}
+\end{figure}
+}
+
+\only<2-2>{
+\begin{figure}
+\includegraphics[width=\textwidth]{assets/neutrino-inverted-hierarchy.png}
+\caption*{Olga Mena \& Stephen Parke, 2004}
+\end{figure}
+}
+
 \end{column}
 
 
@@ -221,9 +251,10 @@ UNM}
 
 %%%%% Neutrino Oscillations %%%%%%%%%
 
+\subsection{Neutrino oscillation}
+
+
 \begin{frame}{What is neutrino oscillation?}
-
-
 
 
 \begin{figure}
@@ -233,7 +264,7 @@ UNM}
 \vfill
 \pause
 {
-\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/oscillations-three-flavor.eps}
+\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/vacuum-oscillations-survival-probability.png}
 }
 \caption{Neutrino oscillation. Source: Neutrino\_oscillation@Wikipedia \textbf{SHOULD CHANGE TO A CUSTOMIZED FIGURE} }
 
@@ -255,7 +286,7 @@ UNM}
 %http://profmattstrassler.com/articles-and-posts/particle-physics-basics/neutrinos/neutrino-types-and-neutrino-oscillations/
 \vfill
 {
-\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/oscillations-three-flavor.eps}
+\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/vacuum-oscillations-survival-probability.png}
 }
 \caption{Neutrino oscillation. Source: Neutrino\_oscillation@Wikipedia \textbf{SHOULD CHANGE TO A CUSTOMIZED FIGURE} }
 
@@ -265,13 +296,14 @@ UNM}
 \begin{textblock*}{64mm}(32mm,0.4\textheight)
 
 \metroset{block=fill}
-\begin{alertblock}
+\begin{tcolorbox}
 \centering
 \begin{equation*}
   \equalto{\textbf{\large Neutrino Oscillations} }{ \textbf{\large Neutrino Flavor Conversion } }
 \end{equation*}
-  
-\end{alertblock}
+
+\vspace{1em}
+\end{tcolorbox}
 \end{textblock*}
 
 
@@ -283,64 +315,439 @@ UNM}
 %%%%%% Why Neutrinos Oscillate? %%%%%%%%%
 
 
+% For every picture that defines or uses external nodes, you'll have to
+% apply the 'remember picture' style. To avoid some typing, we'll apply
+% the style to all pictures.
+\tikzstyle{every picture}+=[remember picture]
+
+% By default all math in TikZ nodes are set in inline mode. Change this to
+% displaystyle so that we don't get small fractions.
+\everymath{\displaystyle}
+
+
 \begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
 
-
-  
-\begin{tcolorbox}[title=What if flavor eigenstates are the energy eigenstates?]
-The initial condition $\ket{\Psi(t=0)}=\ket{\nu_e}$ with eigen energy $E_1$. Then the state at any time is
+\begin{tcolorbox}[title=Equation of Motion]
 
 \begin{equation*}
-\ket{\Psi(t)} = \ket{\nu_e} e^{-iE_1 t}.
+i\partial_x \Psi = \mathbf H \Psi
 \end{equation*}
 
-Survival probability for electron flavor neutrino is
+\end{tcolorbox}
+
+
+
+
+\begin{itemize}
+\item Choose a proper basis: Hamiltonian diagonalized basis/mass eigenbasis/propagation eigenbasis.
+
+\item
+\begin{equation*}
+    \mathbf H = - \frac{\omega_v}{2}\boldsymbol{\sigma_3}, \qquad \text{where } \omega_v = \frac{\delta m^2}{2E}.
+\end{equation*}
+
+
+
+\item The system can be solved given initial condition of the wave function $(\psi_1(0),\psi_2(0))^T$,
+\begin{equation*}
+    \begin{pmatrix}
+    \psi_1(t) \\
+    \psi_2(t)
+    \end{pmatrix} = \begin{pmatrix}
+    \psi_1(0) \exp\left( \ii  \omega_v x /2 \right) \\
+    \psi_2(0) \exp\left( -\ii  \omega_v x/2 \right)
+    \end{pmatrix} 
+\end{equation*}
+
+
+\end{itemize}
+
+
+
+
+\end{frame}
+
+
+%%%%%%%%%
+
+
+
+\begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
+\setbeamercovered{transparent}
+
+\begin{tcolorbox}[title=Flavor basis]
+
+
+Neutrino state in flavor basis $(\psi_e, \psi_x)^T$ is related to state in energy eigenbasis $(\psi_1,\psi_2)^T$ through
+\begin{equation*}
+\begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} = \begin{pmatrix}  \cos\theta  & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
+\end{equation*}
+
+\end{tcolorbox}
+
+\pause
+
+\begin{tcolorbox}[title=Hamiltonian $\mathbf H$]
+
+\begin{columns}[T] % align columns
+\begin{column}{.49\textwidth}
+\color{teal}\rule{\linewidth}{4pt}
+\centering Mass eigenstate basis
+
 
 \begin{align*}
-&\phantom{=} P(\ket{\nu_e}\to\ket{\nu_e}) \\
-& = \lvert \braket{\nu_e}{\psi(t)} \rvert ^2 \\
-& = 1
+&\frac{\omega_v}{2}\begin{pmatrix}
+-1  & 0 \\
+0 & 1
+\end{pmatrix}\\
+=&
+-\frac{\omega_v}{2}\boldsymbol{ \sigma_3 }
+\end{align*}
+
+
+
+\end{column}%
+\hfill%
+
+\begin{column}{.49\textwidth}
+\color{olive}\rule{\linewidth}{4pt}
+\centering Flavor eigenstate basis
+
+\begin{align*}
+&\frac{\omega_v}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix} \\
+=&
+\frac{\omega_v}{2}\left( - \cos 2\theta_v\boldsymbol{ \sigma_3 } + \sin 2\theta_v \boldsymbol{\sigma_1} \right)
+\end{align*}
+
+\end{column}%
+\end{columns}
+
+\end{tcolorbox}
+
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]
+  \frametitle{Nature of Neutrino Oscillation}
+\setbeamercovered{transparent}
+
+\onslide<1->{
+\begin{tcolorbox}[title=What is the cause of oscillation?]
+As long as flavor eigenstates are NOT energy eigenstates, neutrino oscillations can happen.
+\end{tcolorbox}
+}
+
+\onslide<1->{
+\begin{tcolorbox}[title=Basis]
+\begin{description}
+\item[Energy Eigenbasis] Diagonalized Hamiltonian
+\item[Flavor Eigenbasis] Eigenstates of weak interaction
+\end{description}
+\end{tcolorbox}
+}
+
+
+%%% Pause here
+%\pasue
+
+\onslide<2->{
+\begin{tcolorbox}[title=Mixing Angle and Eigenenergies]
+\alert{Change mixing angles $\to$ change mixing amplitude\\
+Change energy eigenstates $\to$ mixing frequency}
+
+\begin{equation*}
+P(\ket{\nu_e}\to\ket{\nu_x})  = \frac{1}{2} \sin^2(2\theta_v) \left[ 1- \cos \left( \omega_v x \right) \right]
+\end{equation*}
+\end{tcolorbox}
+}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% Matter Effect %%%%%%%%%%%%%%%
+
+
+\section{Matter Effect}
+
+
+\subsection{Matter Interaction}
+
+
+\begin{frame}{Matter Interaction}
+
+
+\begin{tcolorbox}[title=PLACEHOLDER]
+SHOULD ADD IN WHY MATTER INTERACTION IS LIKE THIS test math $\frac{A}{B}$
+\end{tcolorbox}
+
+
+\end{frame}
+
+
+
+
+
+% For every picture that defines or uses external nodes, you'll have to
+% apply the 'remember picture' style. To avoid some typing, we'll apply
+% the style to all pictures.
+\tikzstyle{every picture}+=[remember picture]
+
+
+% By default all math in TikZ nodes are set in inline mode. Change this to
+% displaystyle so that we don't get small fractions.
+\everymath{\displaystyle}
+
+
+
+\begin{frame}{Matter Interaction}
+\tikzstyle{na} = [baseline=-.5ex]
+
+
+
+
+\begin{itemize}
+    \item[] Hamiltonian with Matter Interaction in Flavor Basis:
+        \tikz[na] \node[coordinate] (n1) {};
+\end{itemize}
+
+
+\only<1-1>{
+\begin{equation*}
+    \mathbf{H} = 
+    \tikz[baseline]{
+            \node[fill=blue!20,anchor=base] (t1)
+            {$ \frac{\omega_v}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix} $}
+            } + 
+            \tikz[baseline]{
+            \node[fill=red!20, anchor=base] (t2)
+            {$ 
+            \sqrt{2}G_F n_e(x) \begin{pmatrix}
+            1 & 0 \\
+            0 & 0
+            \end{pmatrix}
+            $};
+        }
+\end{equation*}
+
+
+
+}
+
+
+
+
+\only<2-2>{
+\begin{equation*}
+    \mathbf{H} = 
+    \tikz[baseline]{
+            \node[fill=blue!20,anchor=base] (t1)
+            {$ \frac{\omega_v}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix} $}
+            } + 
+            \tikz[baseline]{
+            \node[fill=red!20, anchor=base] (t2)
+            {$ 
+            \frac{\sqrt{2}G_F n_e(x)}{2} \begin{pmatrix}
+            1 & 0 \\
+            0 & -1
+            \end{pmatrix}
+            $};
+        }
+\end{equation*}
+
+}
+
+\only<3-3>{
+\begin{equation*}
+    \mathbf{H} = 
+    \tikz[baseline]{
+            \node[fill=blue!20,anchor=base] (t1)
+            {$ \frac{\omega_v}{2}\left( - \cos 2\theta_v \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1} \right) $}
+            } + 
+            \tikz[baseline]{
+            \node[fill=red!20, anchor=base] (t2)
+            {$ 
+            \frac{\sqrt{2}G_F n_e(x)}{2} \boldsymbol{\sigma_3}
+            $};
+        }
+\end{equation*}
+
+}
+
+\only<4->{
+\begin{equation*}
+    \mathbf{H} = 
+    \tikz[baseline]{
+            \node[fill=blue!20,anchor=base] (t1)
+            {$ \frac{\omega_v}{2}\left( - \cos 2\theta_v \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1} \right) $}
+            } + 
+            \tikz[baseline]{
+            \node[fill=red!20, anchor=base] (t2)
+            {$ 
+            \frac{\lambda(x)}{2} \boldsymbol{\sigma_3}
+            $};
+        }
+\end{equation*}
+
+}
+
+
+\begin{itemize}
+    \item Vacuum Hamiltonian
+        \tikz[na]\node [coordinate] (n2) {};
+    \item Matter interaction
+        \tikz[na]\node [coordinate] (n3) {};
+    \item<4-> $\lambda(x) = \sqrt{2}G_F n_e(x)$ 
+\end{itemize}
+
+
+
+
+
+% Now it's time to draw some edges between the global nodes. Note that we
+% have to apply the 'overlay' style.
+\begin{tikzpicture}[overlay]
+        \path[->]<1-> (n2) edge [bend right] (t1);
+        \path[->]<1-> (n3) edge [bend right=20] (t2);
+\end{tikzpicture}
+
+\only<4->{
+\begin{tcolorbox}[title=Hamiltonian with Matter Potential]
+
+\begin{equation*}
+    \mathbf{H} = \frac{\lambda(x) - \omega_v \cos 2\theta_v}{2} \boldsymbol{\sigma_3} + \frac{ \omega_v \sin 2\theta_v}{2} \boldsymbol{\sigma_1}
+\end{equation*}
+
+\end{tcolorbox}
+}
+
+
+
+
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%
+\subsection{MSW Effect}
+
+\begin{frame}{MSW Effect}
+
+\begin{tcolorbox}[title=Hamiltonian with Matter Potential]
+
+\begin{equation*}
+    \mathbf{H} = \frac{  {\color{red}\omega_m(x) }    {\color{blue}\cos 2\theta_m(x)}  }{2} \boldsymbol{\sigma_3} + \frac{ {\color{red}\omega_m(x) }   {\color{red}\sin 2\theta_m(x) } }{2} \boldsymbol{\sigma_1},
+\end{equation*}
+
+where
+
+\begin{align*}
+    {\color{red}\omega_m(x) } =& \omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos^2 2\theta_v \right)^2 + \sin^2 2\theta_v  }  ,\\
+    {\color{blue}\tan 2\theta_m(x)} = & \sin 2\theta_v /\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right) .
 \end{align*}
 
 \end{tcolorbox}
 
 
 
-\end{frame}
-
-
-
-\begin{frame}[fragile]
-  \frametitle{Nature of Neutrino Oscillation}
-
-\begin{tcolorbox}[title=What is the cause of oscillation?]
-As long as flavor eigenstates are NOT energy eigenstates, neutrino oscillations can happen.
-\end{tcolorbox}
-
-\begin{tcolorbox}[title=Basis]
-\begin{description}
-\item[Energy Eigenstates] Diagonalized Hamiltonian
-\item[Flavor Eigenstates] Eigenstates of weak interaction
-\end{description}
-\end{tcolorbox}
-
-\begin{tcolorbox}[title=Mixing Angle and Eigenenergies]
-\alert{Change mixing angles $\to$ change mixing amplitude\\
-Change energy eigenstates $\to$ mixing frequency}
+\begin{tcolorbox}[title=Hamiltonian in Vacuum]
 
 \begin{equation*}
-P(\ket{\nu_e}\to\ket{\nu_x})  = \frac{1}{2} \sin^2(2\theta) (1- \cos ( \Delta E t ) )
+    \mathbf{H} = \frac{\omega_v \cos 2\theta_v }{2} \boldsymbol{\sigma_3} + \frac{ \omega_v \sin 2\theta_v}{2} \boldsymbol{\sigma_1}
 \end{equation*}
+
 \end{tcolorbox}
+
+
+
 
 \end{frame}
 
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% Tikz Marks Equations %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+% For every picture that defines or uses external nodes, you'll have to
+% apply the 'remember picture' style. To avoid some typing, we'll apply
+% the style to all pictures.
+\tikzstyle{every picture}+=[remember picture]
+
+% By default all math in TikZ nodes are set in inline mode. Change this to
+% displaystyle so that we don't get small fractions.
+\everymath{\displaystyle}
+
+
+
+
+\begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
+\tikzstyle{na} = [baseline=-.5ex]
+
+\begin{itemize}[<+-| alert@+>]
+    \item Coriolis acceleration
+        \tikz[na] \node[coordinate] (n1) {};
+\end{itemize}
+
+% Below we mix an ordinary equation with TikZ nodes. Note that we have to
+% adjust the baseline of the nodes to get proper alignment with the rest of
+% the equation.
+\begin{equation*}
+X = A+B +
+        \tikz[baseline]{
+            \node[fill=blue!20,anchor=base] (t1)
+            {$ C $};
+        } +
+        \tikz[baseline]{
+            \node[fill=red!20, ellipse,anchor=base] (t2)
+            {$D $};
+        } +
+        \tikz[baseline]{
+            \node[fill=green!20,anchor=base] (t3)
+            {$ E $};
+        }
+\end{equation*}
+
+\begin{itemize}[<+-| alert@+>]
+    \item Transversal acceleration
+        \tikz[na]\node [coordinate] (n2) {};
+    \item Centripetal acceleration
+        \tikz[na]\node [coordinate] (n3) {};
+\end{itemize}
+
+% Now it's time to draw some edges between the global nodes. Note that we
+% have to apply the 'overlay' style.
+\begin{tikzpicture}[overlay]
+        \path[->]<1-> (n1) edge [bend left] (t1);
+        \path[->]<2-> (n2) edge [bend right] (t2);
+        \path[->]<3-> (n3) edge [out=0, in=-90] (t3);
+\end{tikzpicture}
+\end{frame}
 
 
 
 %%%%%%%%%%%%%%%%%%%% The Original Slides as Examples %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 
 
