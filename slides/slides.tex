@@ -170,7 +170,7 @@ UNM}
 1956 & Reines \& Cowan, first neutrino evidence \endlr
 1957 & \textbf{Pontecorvo, theory of neutrino oscillations} \endlr
 1968 & Homestake, first solar neutrino detection \endlr
-1969 & Gribov \& Pontecorvo, solar neutrino oscillations \endlr
+%1969 & Gribov \& Pontecorvo, solar neutrino oscillations \endlr
 1978 \& 1985 & \textbf{Wolfenstein \& Mikheyev \& Smirnov, MSW effect} \endlr
 1987 & Kamioka mine \& Morton salt mine, SN1987A neutrino\endlr
 1998 \& 2001 & Super-Kamiokande \& SNO, solar neutrino oscillations \endlr
@@ -186,13 +186,13 @@ UNM}
 
 
 %%%% Neutrino as a Particle
-\subsection{What is neutrino?}
+\subsection{What is neutrino}
 
 \begin{frame}{What is neutrino?}
 
 \begin{figure}
 \includegraphics[width=0.9\linewidth,height=0.9\textheight,keepaspectratio]{assets/beta-decay.png}
-\caption{Beta decay and antineutrino production. Source: Beta\_Decay@Wikipedia}
+\caption*{Beta decay and antineutrino production. Source: Beta\_Decay@Wikipedia}
 \end{figure}
 
 
@@ -209,7 +209,7 @@ UNM}
 \begin{column}{0.6\textwidth}
 \begin{figure}
 \includegraphics[width=0.9\linewidth,height=0.8\textheight,keepaspectratio]{assets/elementary-particles.jpg}
-\caption{Table of elementary particles. Source: Fermilab} % http://www-d0.fnal.gov/Run2Physics/WWW/results/final/TOP/T06C/T06C.html
+\caption*{Table of elementary particles. Source: Fermilab} % http://www-d0.fnal.gov/Run2Physics/WWW/results/final/TOP/T06C/T06C.html
 \end{figure}
 \end{column}
 
@@ -228,14 +228,14 @@ UNM}
 \only<1-1>{
 \begin{figure}
 \includegraphics[width=\textwidth]{assets/neutrino-normal-hierarchy.png}
-\caption*{Olga Mena \& Stephen Parke, 2004}
+\caption*{Olga Mena \& Stephen Parke, 2004 {\color{red}SHOULD FIND A BETTER DIAGRAM, Move to mass eigenstates section?} }
 \end{figure}
 }
 
 \only<2-2>{
 \begin{figure}
 \includegraphics[width=\textwidth]{assets/neutrino-inverted-hierarchy.png}
-\caption*{Olga Mena \& Stephen Parke, 2004}
+\caption*{Olga Mena \& Stephen Parke, 2004 {\color{red}SHOULD FIND A BETTER DIAGRAM} }
 \end{figure}
 }
 
@@ -264,9 +264,9 @@ UNM}
 \vfill
 \pause
 {
-\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/vacuum-oscillations-survival-probability.png}
+\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/vacuum-oscillations-survival-probability.eps}
 }
-\caption{Neutrino oscillation. Source: Neutrino\_oscillation@Wikipedia \textbf{SHOULD CHANGE TO A CUSTOMIZED FIGURE} }
+\caption*{Neutrino oscillations. {\color{red}NO GREEN}}
 
 \end{figure}
 
@@ -279,16 +279,16 @@ UNM}
 \begin{frame}{What is neutrino oscillation?}
 
 
-\setcounter{figure}{\thefigure-1}  
+%\setcounter{figure}{\thefigure-1}  
 \begin{figure}
   \centering
 {\includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{assets/neutrino-oscillations-illustration.png} }
 %http://profmattstrassler.com/articles-and-posts/particle-physics-basics/neutrinos/neutrino-types-and-neutrino-oscillations/
 \vfill
 {
-\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/vacuum-oscillations-survival-probability.png}
+\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/vacuum-oscillations-survival-probability.eps}
 }
-\caption{Neutrino oscillation. Source: Neutrino\_oscillation@Wikipedia \textbf{SHOULD CHANGE TO A CUSTOMIZED FIGURE} }
+\caption*{Neutrino oscillations}
 
 \end{figure}
 
@@ -299,7 +299,7 @@ UNM}
 \begin{tcolorbox}
 \centering
 \begin{equation*}
-  \equalto{\textbf{\large Neutrino Oscillations} }{ \textbf{\large Neutrino Flavor Conversion } }
+  \equalto{\textbf{\large Neutrino Oscillation} }{ \textbf{\large Neutrino Flavor Conversion } }
 \end{equation*}
 
 \vspace{1em}
@@ -343,7 +343,7 @@ i\partial_x \Psi = \mathbf H \Psi
 
 \item
 \begin{equation*}
-    \mathbf H = - \frac{\omega_v}{2}\boldsymbol{\sigma_3}, \qquad \text{where } \omega_v = \frac{\delta m^2}{2E}.
+    \mathbf H = - \frac{\omega_v}{2}\boldsymbol{\sigma_3}, \qquad \text{where } \omega_v = \frac{\delta m^2}{2E}=\frac{m_2^2 - m_1^2}{2E} .
 \end{equation*}
 
 
@@ -378,10 +378,21 @@ i\partial_x \Psi = \mathbf H \Psi
 \begin{tcolorbox}[title=Flavor basis]
 
 
+\begin{columns}
+\begin{column}{0.7\textwidth}
 Neutrino state in flavor basis $(\psi_e, \psi_x)^T$ is related to state in energy eigenbasis $(\psi_1,\psi_2)^T$ through
+
 \begin{equation*}
 \begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} = \begin{pmatrix}  \cos\theta  & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
 \end{equation*}
+\end{column}%
+\hfill%
+\begin{column}{0.3\textwidth}
+\begin{figure}
+\includegraphics[height=0.27\textheight]{assets/msw-mixing-rotation-axis-angle-10.eps}
+\end{figure}
+\end{column}
+\end{columns}
 
 \end{tcolorbox}
 
@@ -391,8 +402,8 @@ Neutrino state in flavor basis $(\psi_e, \psi_x)^T$ is related to state in energ
 
 \begin{columns}[T] % align columns
 \begin{column}{.49\textwidth}
-\color{teal}\rule{\linewidth}{4pt}
-\centering Mass eigenstate basis
+
+\centering Energy eigenbasis
 
 
 \begin{align*}
@@ -410,8 +421,8 @@ Neutrino state in flavor basis $(\psi_e, \psi_x)^T$ is related to state in energ
 \hfill%
 
 \begin{column}{.49\textwidth}
-\color{olive}\rule{\linewidth}{4pt}
-\centering Flavor eigenstate basis
+
+\centering Flavor eigenbasis
 
 \begin{align*}
 &\frac{\omega_v}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix} \\
@@ -456,13 +467,15 @@ As long as flavor eigenstates are NOT energy eigenstates, neutrino oscillations 
 %\pasue
 
 \onslide<2->{
-\begin{tcolorbox}[title=Mixing Angle and Eigenenergies]
+\begin{tcolorbox}[title=Survival Probability]
+
+\begin{equation*}
+P(\ket{\nu_e}\to\ket{\nu_x})  =  \sin^2(2\theta_v) \frac{ 1- \cos \left( \omega_v x \right) }{2}
+\end{equation*}
 \alert{Change mixing angles $\to$ change mixing amplitude\\
 Change energy eigenstates $\to$ mixing frequency}
 
-\begin{equation*}
-P(\ket{\nu_e}\to\ket{\nu_x})  = \frac{1}{2} \sin^2(2\theta_v) \left[ 1- \cos \left( \omega_v x \right) \right]
-\end{equation*}
+
 \end{tcolorbox}
 }
 
@@ -485,7 +498,7 @@ P(\ket{\nu_e}\to\ket{\nu_x})  = \frac{1}{2} \sin^2(2\theta_v) \left[ 1- \cos \le
 
 
 \begin{tcolorbox}[title=PLACEHOLDER]
-SHOULD ADD IN WHY MATTER INTERACTION IS LIKE THIS test math $\frac{A}{B}$
+SHOULD ADD IN WHY MATTER INTERACTION IS LIKE THIS.
 \end{tcolorbox}
 
 
@@ -514,7 +527,7 @@ SHOULD ADD IN WHY MATTER INTERACTION IS LIKE THIS test math $\frac{A}{B}$
 
 
 \begin{itemize}
-    \item[] Hamiltonian with Matter Interaction in Flavor Basis:
+    \item[] Hamiltonian with Matter Interaction in Flavor Basis  ($\omega_v=\delta m^2/2E$):
         \tikz[na] \node[coordinate] (n1) {};
 \end{itemize}
 
@@ -652,7 +665,7 @@ where
 
 \begin{align*}
     {\color{red}\omega_m(x) } =& \omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos^2 2\theta_v \right)^2 + \sin^2 2\theta_v  }  ,\\
-    {\color{blue}\tan 2\theta_m(x)} = & \sin 2\theta_v /\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right) .
+    {\color{blue}\tan 2\theta_m(x)} = & \sin 2\theta_v /\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right) \geq \tan 2\theta_v.
 \end{align*}
 
 \end{tcolorbox}
@@ -674,6 +687,231 @@ where
 
 
 
+
+
+\begin{frame}{Constant Matter Density}
+
+\begin{tcolorbox}[title=Transition Probability for Constant Matter Density]
+
+
+\begin{equation*}
+P(\ket{\nu_e}\to\ket{\nu_x})  = \frac{1}{2} {\color{blue}\sin^2(2\theta_m)} \left[ 1- \cos \left( {\color{red}\omega_m} x \right) \right]
+\end{equation*}
+
+\only<1-1>{
+where
+\begin{align*}
+    {\color{red}\omega_m(x) } =& \omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos 2\theta_v \right)^2 + \sin^2 2\theta_v  }  ,\\
+    {\color{blue}\tan 2\theta_m(x)} = & \sin 2\theta_v /\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right)  \geq \tan 2\theta_v .
+\end{align*}
+}
+
+\end{tcolorbox}
+
+
+\only<2->{
+
+
+
+\begin{itemize}
+    \item Oscillation amplitude depends on
+    \vspace{-1em}
+\begin{columns}[T]
+
+\begin{column}{0.32\textwidth}
+\begin{figure}
+\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-30.eps}
+\end{figure}
+\end{column}%
+\hfill%
+\begin{column}{0.32\textwidth}
+\begin{figure}
+\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-20.eps}
+\end{figure}
+\end{column}%
+\hfill%
+\begin{column}{0.32\textwidth}
+\begin{figure}
+\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-10.eps}
+\end{figure}
+\end{column}
+
+\end{columns}
+
+\item Oscillation angular frequency is
+
+\begin{equation*}
+    \omega_m \leq \omega_v \sin 2\theta_v
+\end{equation*}
+
+
+
+\end{itemize}
+
+}
+
+
+\end{frame}
+
+
+
+
+%%%%%%% MSW Effect %%%%%%%%%
+
+\begin{frame}{MSW Effect}
+
+
+
+\only<1-1>{
+
+\begin{equation*}
+    \mathbf{H} = \frac{\lambda(x) - \omega_v \cos 2\theta_v}{2} \boldsymbol{\sigma_3} + \frac{ \omega_v \sin 2\theta_v}{2} \boldsymbol{\sigma_1}
+\end{equation*}
+
+
+\begin{equation*}
+    \begin{pmatrix}
+    \nu_{e}\\
+    \nu_{x}
+    \end{pmatrix} =  \begin{pmatrix}
+    \cos \theta_m(x) & \sin \theta_m(x)\\
+    -\sin \theta_m(x) & \cos \theta_m(x)
+    \end{pmatrix}
+    \begin{pmatrix}
+    \nu_{1m}\\
+    \nu_{2m}
+    \end{pmatrix}
+\end{equation*}
+
+}
+
+\only<2->{
+\vspace{-1em}
+\begin{columns}[T]
+
+\begin{column}{0.32\textwidth}
+\begin{figure}
+\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-30.eps}
+\end{figure}
+\end{column}%
+\hfill%
+\begin{column}{0.32\textwidth}
+\begin{figure}
+\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-20.eps}
+\end{figure}
+\end{column}%
+\hfill%
+\begin{column}{0.32\textwidth}
+\begin{figure}
+\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-10.eps}
+\end{figure}
+\end{column}
+
+\end{columns}
+}
+
+
+
+\pause
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{assets/msw_and_density.png}
+\caption*{ $n_e^R$ is the resonance density. Yellow bar is the resonance point. Smirnov, 2003.{\color{red} NEED A BETTER FIGURE. Probably only the first case is needed.}}
+\label{fig:msw_and_density}
+\end{figure}
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{MSW Resonance}
+
+\begin{tcolorbox}[title=MSW Resonance Width]
+
+Add a slide about MSW resonance width $\Gamma(n_e) = \frac{\omega_v}{\lambda} n_e \sin 2\theta_v$. Blennow, \& Smirnov
+
+\end{tcolorbox}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% Parametric Effect %%%%%%%%%%%%%%%
+
+
+\begin{frame}{Parametric Effect}
+
+\begin{tcolorbox}[title=Parametric Effect]
+
+Parametric Effect, Parametric Resonance?
+
+\end{tcolorbox}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% Stimulated Effect/Multi-frequency stimulation %%%%%%%%%%%%%%%
+
+\subsection{Stimulated Neutrino Oscillation}
+
+\begin{frame}{Length Scales}
+
+\begin{tcolorbox}[title=Characteristic Scales]
+\begin{itemize}
+    \item Vacuum problem: only one length scale
+    \begin{equation*}
+        l_v = \frac{1}{\omega_v}
+    \end{equation*}
+    
+    \item Constant matter profile:
+    \begin{equation*}
+        l_m = \frac{1}{\lambda}
+    \end{equation*}
+    
+    \item Varying matter profile $\lambda(x) = \lambda_0 \sin (k x)$,
+    
+    \begin{equation*}
+        l_k = \frac{1}{k}
+    \end{equation*}
+\end{itemize}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=MSW Resonance]
+
+\begin{equation*}
+    l_v \sim l_m \cos 2\theta_v
+\end{equation*}
+
+\end{tcolorbox}
+
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Understanding Stimulated Oscillations}
 
 
 
@@ -703,7 +941,7 @@ where
 \tikzstyle{na} = [baseline=-.5ex]
 
 \begin{itemize}[<+-| alert@+>]
-    \item Coriolis acceleration
+    \item this term blablabla
         \tikz[na] \node[coordinate] (n1) {};
 \end{itemize}
 
@@ -751,8 +989,6 @@ X = A+B +
 
 
 
-
-\section{Elements}
 
 \begin{frame}[fragile]{Typography}
       \begin{verbatim}The theme provides sensible defaults to
