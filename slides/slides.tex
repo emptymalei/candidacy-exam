@@ -1,10 +1,12 @@
 \documentclass[10pt]{beamer}
 
-\usetheme[titleformat=smallcaps]{metropolis}
+\usetheme{bjeldbak}
+\setbeamertemplate{headline}{}
+%\usetheme[titleformat=smallcaps]{metropolis}
 \usepackage{appendixnumberbeamer}
 
-\usepackage{booktabs}
-\usepackage[scale=2]{ccicons}
+%\usepackage{booktabs}
+%\usepackage[scale=2]{ccicons}
 \usepackage{tcolorbox}
 
 %\usepackage{minted}
@@ -117,7 +119,8 @@
   ([yshift=\lineoffset]vtimeline\thevtml.north east);
   \node[anchor=west,yshift=16pt,font=\large]
    at (vtimeline\thevtml-1-1.north west) 
-   {\textsc{Timeline \thevtml}: \textit{\vtimelinetitle}};
+   {%\textsc{Timeline \thevtml}: 
+   \textit{\vtimelinetitle}};
  \else%
   \relax%
  \fi%
@@ -146,9 +149,14 @@ UNM}
 
 \begin{document}
 
+  {%
+    \setbeamertemplate{headline}{}
+    \frame{\titlepage}
+  }
+
 \maketitle
 
-\begin{frame}{Table of Contents}
+\begin{frame}{Outline}
   \setbeamertemplate{section in toc}[sections numbered]
   \tableofcontents
 \end{frame}
@@ -164,7 +172,7 @@ UNM}
 \begin{vtimeline}[description={text width=\textwidth}, 
  row sep=2ex, 
  use timeline header,
- timeline title={(Partial) History of Neutrino}]
+ timeline title={History of Neutrino (Partial)}]
 1930 & Pauli, letter to "Radioactive Ladies and Gentlemen"\endlr
 1933 & Fermi, the name "neutrino" \endlr
 1956 & Reines \& Cowan, first neutrino evidence \endlr
@@ -186,9 +194,9 @@ UNM}
 
 
 %%%% Neutrino as a Particle
-\subsection{What is neutrino}
+\subsection{What are Neutrinos}
 
-\begin{frame}{What is neutrino?}
+\begin{frame}{What are Neutrinos?}
 
 \begin{figure}
 \includegraphics[width=0.9\linewidth,height=0.9\textheight,keepaspectratio]{assets/beta-decay.png}
@@ -201,7 +209,7 @@ UNM}
 
 
 
-\begin{frame}{What is neutrino?}
+\begin{frame}{What are Neutrinos?}
 
 \begin{minipage}[\textheight]{\textwidth}
 \begin{columns}[T]
@@ -228,14 +236,14 @@ UNM}
 \only<1-1>{
 \begin{figure}
 \includegraphics[width=\textwidth]{assets/neutrino-normal-hierarchy.png}
-\caption*{Olga Mena \& Stephen Parke, 2004 {\color{red}SHOULD FIND A BETTER DIAGRAM, Move to mass eigenstates section?} }
+\caption*{Adapted from Olga Mena \& Stephen Parke, 2004}
 \end{figure}
 }
 
 \only<2-2>{
 \begin{figure}
 \includegraphics[width=\textwidth]{assets/neutrino-inverted-hierarchy.png}
-\caption*{Olga Mena \& Stephen Parke, 2004 {\color{red}SHOULD FIND A BETTER DIAGRAM} }
+\caption*{Adapted from Olga Mena \& Stephen Parke, 2004}
 \end{figure}
 }
 
@@ -251,62 +259,57 @@ UNM}
 
 %%%%% Neutrino Oscillations %%%%%%%%%
 
-\subsection{Neutrino oscillation}
+\subsection{Neutrino Oscillations}
 
 
-\begin{frame}{What is neutrino oscillation?}
+
+
+
+\begin{frame}{What is Neutrino Oscillation?}
+
+\setbeamercovered{invisible}
+
+\begin{tcolorbox}
+\begin{equation*}
+  \equalto{\textbf{\large Neutrino Oscillation} }{ \textbf{\large Neutrino Flavor Conversion } }
+\end{equation*}
+
+\end{tcolorbox}
 
 
 \begin{figure}
-  \centering
-{\includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{assets/neutrino-oscillations-illustration.png} }
-%http://profmattstrassler.com/articles-and-posts/particle-physics-basics/neutrinos/neutrino-types-and-neutrino-oscillations/
-\vfill
-\pause
-{
-\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/vacuum-oscillations-survival-probability.eps}
-}
-\caption*{Neutrino oscillations. {\color{red}NO GREEN}}
-
+    \centering
+    \includegraphics[width=\textwidth]{assets/neutrino-oscillations-illustration.eps}
+    \caption*{Neutrino Oscillation}
 \end{figure}
+
+
 
 
 
 \end{frame}
 
 
+\begin{frame}{Solar Neutrinos}
 
-\begin{frame}{What is neutrino oscillation?}
+\begin{tcolorbox}[title=Solar Neutrinos]
+
+\begin{equation*}
+    4 \mathrm p \to {}^4 \mathrm{He} + 2\mathrm{e^+} + 2\mathrm{\nu_e}
+\end{equation*}
+
+\end{tcolorbox}
 
 
-%\setcounter{figure}{\thefigure-1}  
+
 \begin{figure}
-  \centering
-{\includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{assets/neutrino-oscillations-illustration.png} }
-%http://profmattstrassler.com/articles-and-posts/particle-physics-basics/neutrinos/neutrino-types-and-neutrino-oscillations/
-\vfill
-{
-\includegraphics[width=0.7\linewidth,height=0.9\textheight,keepaspectratio]{assets/vacuum-oscillations-survival-probability.eps}
-}
-\caption*{Neutrino oscillations}
-
+\centering
+\includegraphics[width=0.8\textwidth]{assets/colortheoryvsexp.png}
+\caption*{Less electron flavor neutrinos observed in experiments than the Standard Solar Model prediction. Bahcall \& Serendelli, 2005}
 \end{figure}
 
 
-\begin{textblock*}{64mm}(32mm,0.4\textheight)
-
-\metroset{block=fill}
-\begin{tcolorbox}
-\centering
-\begin{equation*}
-  \equalto{\textbf{\large Neutrino Oscillation} }{ \textbf{\large Neutrino Flavor Conversion } }
-\end{equation*}
-
-\vspace{1em}
-\end{tcolorbox}
-\end{textblock*}
-
-
+    
 \end{frame}
 
 
@@ -339,7 +342,7 @@ i\partial_x \Psi = \mathbf H \Psi
 
 
 \begin{itemize}
-\item Choose a proper basis: Hamiltonian diagonalized basis/mass eigenbasis/propagation eigenbasis.
+\item Basis: Hamiltonian diagonalized basis/mass eigenbasis/propagation eigenbasis, $\ket{\nu_1}$ and $\ket{\nu_2}$.
 
 \item
 \begin{equation*}
@@ -348,14 +351,14 @@ i\partial_x \Psi = \mathbf H \Psi
 
 
 
-\item The system can be solved given initial condition of the wave function $(\psi_1(0),\psi_2(0))^T$,
+\item The system can be solved given initial condition of the wave function $(\braket{\nu_1}{\Psi(0)},\braket{\nu_2}{\Psi(0)} )^T$,
 \begin{equation*}
     \begin{pmatrix}
-    \psi_1(t) \\
-    \psi_2(t)
+    \braket{\nu_1}{\Psi(t)} \\
+    \braket{\nu_2}{\Psi(t)}
     \end{pmatrix} = \begin{pmatrix}
-    \psi_1(0) \exp\left( \ii  \omega_v x /2 \right) \\
-    \psi_2(0) \exp\left( -\ii  \omega_v x/2 \right)
+    \braket{\nu_1}{\Psi(0)} \exp\left( \ii  \omega_v x /2 \right) \\
+    \braket{\nu_2}{\Psi(0)} \exp\left( -\ii  \omega_v x/2 \right)
     \end{pmatrix} 
 \end{equation*}
 
@@ -373,26 +376,17 @@ i\partial_x \Psi = \mathbf H \Psi
 
 
 \begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
-\setbeamercovered{transparent}
+
 
 \begin{tcolorbox}[title=Flavor basis]
 
 
-\begin{columns}
-\begin{column}{0.7\textwidth}
-Neutrino state in flavor basis $(\psi_e, \psi_x)^T$ is related to state in energy eigenbasis $(\psi_1,\psi_2)^T$ through
+Neutrino wave function in flavor basis $(\psi_e, \psi_x)^T$ is related to state in energy eigenbasis $(\psi_1,\psi_2)^T$ through
 
 \begin{equation*}
-\begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} = \begin{pmatrix}  \cos\theta  & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
+\begin{pmatrix}\psi_e \\ \psi_x\end{pmatrix} = \begin{pmatrix}  \cos\theta  & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix}   \begin{pmatrix}\psi_1 \\ \psi_2\end{pmatrix}
 \end{equation*}
-\end{column}%
-\hfill%
-\begin{column}{0.3\textwidth}
-\begin{figure}
-\includegraphics[height=0.27\textheight]{assets/msw-mixing-rotation-axis-angle-10.eps}
-\end{figure}
-\end{column}
-\end{columns}
+
 
 \end{tcolorbox}
 
@@ -443,41 +437,22 @@ Neutrino state in flavor basis $(\psi_e, \psi_x)^T$ is related to state in energ
 
 
 
-\begin{frame}[fragile]
-  \frametitle{Nature of Neutrino Oscillation}
-\setbeamercovered{transparent}
-
-\onslide<1->{
-\begin{tcolorbox}[title=What is the cause of oscillation?]
-As long as flavor eigenstates are NOT energy eigenstates, neutrino oscillations can happen.
-\end{tcolorbox}
-}
-
-\onslide<1->{
-\begin{tcolorbox}[title=Basis]
-\begin{description}
-\item[Energy Eigenbasis] Diagonalized Hamiltonian
-\item[Flavor Eigenbasis] Eigenstates of weak interaction
-\end{description}
-\end{tcolorbox}
-}
+\begin{frame}[fragile]{Nature of Neutrino Oscillation}
+\setbeamercovered{invisible}
 
 
-%%% Pause here
-%\pasue
 
-\onslide<2->{
 \begin{tcolorbox}[title=Survival Probability]
 
 \begin{equation*}
 P(\ket{\nu_e}\to\ket{\nu_x})  =  \sin^2(2\theta_v) \frac{ 1- \cos \left( \omega_v x \right) }{2}
 \end{equation*}
-\alert{Change mixing angles $\to$ change mixing amplitude\\
-Change energy eigenstates $\to$ mixing frequency}
+\alert{Mixing angle $\to$ Flavor oscillation amplitude\\
+Eigenenergies $\to$ Oscillation frequency}
 
 
 \end{tcolorbox}
-}
+
 
 \end{frame}
 
@@ -655,21 +630,6 @@ SHOULD ADD IN WHY MATTER INTERACTION IS LIKE THIS.
 
 \begin{frame}{MSW Effect}
 
-\begin{tcolorbox}[title=Hamiltonian with Matter Potential]
-
-\begin{equation*}
-    \mathbf{H} = \frac{  {\color{red}\omega_m(x) }    {\color{blue}\cos 2\theta_m(x)}  }{2} \boldsymbol{\sigma_3} + \frac{ {\color{red}\omega_m(x) }   {\color{red}\sin 2\theta_m(x) } }{2} \boldsymbol{\sigma_1},
-\end{equation*}
-
-where
-
-\begin{align*}
-    {\color{red}\omega_m(x) } =& \omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos^2 2\theta_v \right)^2 + \sin^2 2\theta_v  }  ,\\
-    {\color{blue}\tan 2\theta_m(x)} = & \sin 2\theta_v /\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right) \geq \tan 2\theta_v.
-\end{align*}
-
-\end{tcolorbox}
-
 
 
 \begin{tcolorbox}[title=Hamiltonian in Vacuum]
@@ -679,6 +639,24 @@ where
 \end{equation*}
 
 \end{tcolorbox}
+
+
+\begin{tcolorbox}[title=Hamiltonian with Matter Potential]
+
+\begin{equation*}
+    \mathbf{H} = \frac{  {\color{red}\omega_m(x) }    {\color{blue}\cos 2\theta_m(x)}  }{2} \boldsymbol{\sigma_3} + \frac{ {\color{red}\omega_m(x) }   {\color{red}\sin 2\theta_m(x) } }{2} \boldsymbol{\sigma_1},
+\end{equation*}
+
+where
+
+\begin{align*}
+    {\color{red}\omega_m(x) } =& \omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos 2\theta_v \right)^2 + \sin^2 2\theta_v  }  ,\\
+    {\color{blue}\tan 2\theta_m(x)} = & \sin 2\theta_v /\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right).
+\end{align*}
+
+\end{tcolorbox}
+
+
 
 
 
@@ -702,7 +680,7 @@ P(\ket{\nu_e}\to\ket{\nu_x})  = \frac{1}{2} {\color{blue}\sin^2(2\theta_m)} \lef
 where
 \begin{align*}
     {\color{red}\omega_m(x) } =& \omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos 2\theta_v \right)^2 + \sin^2 2\theta_v  }  ,\\
-    {\color{blue}\tan 2\theta_m(x)} = & \sin 2\theta_v /\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right)  \geq \tan 2\theta_v .
+    {\color{blue}\tan 2\theta_m(x)} = & \sin 2\theta_v /\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right)  .
 \end{align*}
 }
 
@@ -715,33 +693,13 @@ where
 
 \begin{itemize}
     \item Oscillation amplitude depends on
-    \vspace{-1em}
-\begin{columns}[T]
+    
 
-\begin{column}{0.32\textwidth}
-\begin{figure}
-\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-30.eps}
-\end{figure}
-\end{column}%
-\hfill%
-\begin{column}{0.32\textwidth}
-\begin{figure}
-\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-20.eps}
-\end{figure}
-\end{column}%
-\hfill%
-\begin{column}{0.32\textwidth}
-\begin{figure}
-\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-10.eps}
-\end{figure}
-\end{column}
-
-\end{columns}
 
 \item Oscillation angular frequency is
 
 \begin{equation*}
-    \omega_m \leq \omega_v \sin 2\theta_v
+    \omega_m \geq \omega_v \sin 2\theta_v
 \end{equation*}
 
 
@@ -760,9 +718,9 @@ where
 
 \begin{frame}{MSW Effect}
 
+\setbeamercovered{invisible}
 
 
-\only<1-1>{
 
 \begin{equation*}
     \mathbf{H} = \frac{\lambda(x) - \omega_v \cos 2\theta_v}{2} \boldsymbol{\sigma_3} + \frac{ \omega_v \sin 2\theta_v}{2} \boldsymbol{\sigma_1}
@@ -783,42 +741,17 @@ where
     \end{pmatrix}
 \end{equation*}
 
-}
-
-\only<2->{
-\vspace{-1em}
-\begin{columns}[T]
-
-\begin{column}{0.32\textwidth}
-\begin{figure}
-\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-30.eps}
-\end{figure}
-\end{column}%
-\hfill%
-\begin{column}{0.32\textwidth}
-\begin{figure}
-\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-20.eps}
-\end{figure}
-\end{column}%
-\hfill%
-\begin{column}{0.32\textwidth}
-\begin{figure}
-\includegraphics[height=0.2\textheight]{assets/msw-mixing-rotation-axis-angle-10.eps}
-\end{figure}
-\end{column}
-
-\end{columns}
-}
 
 
 
-\pause
+
+
 
 
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth]{assets/msw_and_density.png}
-\caption*{ $n_e^R$ is the resonance density. Yellow bar is the resonance point. Smirnov, 2003.{\color{red} NEED A BETTER FIGURE. Probably only the first case is needed.}}
+\caption*{ $n_e^R$ is the resonance density. Yellow bar is the resonance point. Smirnov, 2003.}
 \label{fig:msw_and_density}
 \end{figure}
 
@@ -826,17 +759,6 @@ where
 
 \end{frame}
 
-
-
-\begin{frame}{MSW Resonance}
-
-\begin{tcolorbox}[title=MSW Resonance Width]
-
-Add a slide about MSW resonance width $\Gamma(n_e) = \frac{\omega_v}{\lambda} n_e \sin 2\theta_v$. Blennow, \& Smirnov
-
-\end{tcolorbox}
-
-\end{frame}
 
 
 
@@ -867,30 +789,55 @@ Parametric Effect, Parametric Resonance?
 \begin{itemize}
     \item Vacuum problem: only one length scale
     \begin{equation*}
-        l_v = \frac{1}{\omega_v}
+        l_v \sim \frac{1}{\omega_v}
     \end{equation*}
     
-    \item Constant matter profile:
+    \item Constant matter profile $\lambda_0$:
     \begin{equation*}
-        l_m = \frac{1}{\lambda}
+        l_v, \quad l_m \sim \frac{1}{\omega_m} 
     \end{equation*}
     
     \item Varying matter profile $\lambda(x) = \lambda_0 \sin (k x)$,
     
     \begin{equation*}
-        l_k = \frac{1}{k}
+        l_v, \quad l_m, \quad l_k \sim \frac{1}{k}
     \end{equation*}
 \end{itemize}
 
 \end{tcolorbox}
 
+\only<2-2>{
+\begin{textblock*}{64mm}(64mm,0.01\textheight)
+
+\tiny
+$$\omega_m = \omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos 2\theta_v \right)^2 + \sin^2 2\theta_v  }$$
+\normalsize
+
+\end{textblock*}
+}
+
+
+\only<1-1>{
 \begin{tcolorbox}[title=MSW Resonance]
+
 
 \begin{equation*}
     l_v \sim l_m \cos 2\theta_v
 \end{equation*}
 
 \end{tcolorbox}
+}
+
+\only<2-2>{
+
+\begin{tcolorbox}
+
+Matching of $l_v$, and $l_k$?
+
+\end{tcolorbox}
+
+}
+
 
 
 \end{frame}
@@ -901,11 +848,105 @@ Parametric Effect, Parametric Resonance?
 
 
 
+\section{Stimulated Neutrino Oscillations}
+
+
+\begin{frame}{Stimulated Neutrino Oscillations}
+
+% invisible overlay because it is an OVERLAY!!!
+\setbeamercovered{invisible}
+
+% I need a graph that illustrates the stimulation by comparing Constant matter potential and periodic matter potential.
+
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{assets/stimulated-neutrino-oscillations-kneller.png}
+\caption*{ Kneller, McLaughlin, \& Patton, 2015.
+{\color{red}NEED A Better graph to compare the constant background oscillation and the stimulated oscillation}
+}
+\end{figure}
+
+    
+\end{frame}
+
+
+\begin{frame}{Stimulated Neutrino Oscillations}
+
+% Matter profile
+\begin{tcolorbox}[title=Matter Profile]
+\begin{equation*}
+    \lambda(x)  = \lambda_0 + {\color{red}\delta\lambda(x)}
+\end{equation*}
+\end{tcolorbox}
+
+
+% Basis
+
+
+\begin{tcolorbox}[title=Basis]
+
+Background matter basis: Hamiltonian is diagonalized with only background matter profile $\lambda_0$,
+
+\begin{equation*}
+    \mathbf H= -\frac{\omega_m}{2} \boldsymbol{\sigma_3}.
+\end{equation*}
+
+\end{tcolorbox}
+
+
+% Hamiltonian of with perturbation in matter profile, in background matter basis
+\begin{tcolorbox}[title=Hamiltonian]
+
+\begin{equation*}
+    \mathbf H = \frac{1}{2}\left( - \omega_m + {\color{red}\delta \lambda(x)} \cos 2\theta_m \right) \boldsymbol{\sigma_3} - \frac{\delta \lambda}{2} \sin \theta_m \boldsymbol{\sigma_1}.
+\end{equation*}
+
+
+\end{tcolorbox}
 
 
 
 
+%%% A text block that should be displayed later
+\only<2->{
+\begin{textblock*}{64mm}(32mm,0.4\textheight)
 
+\begin{tcolorbox}
+\centering
+%\rotatebox{0}{
+${\color{red}\delta\lambda(x)}$ is the problem here.
+\begin{itemize}
+    \item Varying background eigenenergy
+    \item $\cdots$
+\end{itemize}
+%}
+\vspace{1em}
+\end{tcolorbox}
+
+\end{textblock*}
+}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Stimulated Neutrino Oscillations: Math}
+
+\begin{tcolorbox}[title=A Better Basis to Work in?]
+
+Remove the position dependence of the diagonalized part of the Hamiltonian!
+
+New basis where the wave function $(\psi_{p1},\psi_{p2})^T$ is related to the wave function in background matter basis
+
+\begin{equation*}
+    \begin{pmatrix}
+    \psi_1
+    \end{pmatrix}
+\end{equation*}
+
+\end{tcolorbox}
+
+\end{frame}
 
 
 
@@ -980,226 +1021,6 @@ X = A+B +
 \end{tikzpicture}
 \end{frame}
 
-
-
-%%%%%%%%%%%%%%%%%%%% The Original Slides as Examples %%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-\begin{frame}[fragile]{Typography}
-      \begin{verbatim}The theme provides sensible defaults to
-\emph{emphasize} text, \alert{accent} parts
-or show \textbf{bold} results.\end{verbatim}
-
-  \begin{center}becomes\end{center}
-
-  The theme provides sensible defaults to \emph{emphasize} text,
-  \alert{accent} parts or show \textbf{bold} results.
-\end{frame}
-
-\begin{frame}{Font feature test}
-  \begin{itemize}
-    \item Regular
-    \item \textit{Italic}
-    \item \textsc{SmallCaps}
-    \item \textbf{Bold}
-    \item \textbf{\textit{Bold Italic}}
-    \item \textbf{\textsc{Bold SmallCaps}}
-    \item \texttt{Monospace}
-    \item \texttt{\textit{Monospace Italic}}
-    \item \texttt{\textbf{Monospace Bold}}
-    \item \texttt{\textbf{\textit{Monospace Bold Italic}}}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Lists}
-  \begin{columns}[T,onlytextwidth]
-    \column{0.33\textwidth}
-      Items
-      \begin{itemize}
-        \item Milk \item Eggs \item Potatos
-      \end{itemize}
-
-    \column{0.33\textwidth}
-      Enumerations
-      \begin{enumerate}
-        \item First, \item Second and \item Last.
-      \end{enumerate}
-
-    \column{0.33\textwidth}
-      Descriptions
-      \begin{description}
-        \item[PowerPoint] Meeh. \item[Beamer] Yeeeha.
-      \end{description}
-  \end{columns}
-\end{frame}
-\begin{frame}{Animation}
-  \begin{itemize}[<+- | alert@+>]
-    \item \alert<4>{This is\only<4>{ really} important}
-    \item Now this
-    \item And now this
-  \end{itemize}
-\end{frame}
-\begin{frame}{Figures}
-  \begin{figure}
-    \newcounter{density}
-    \setcounter{density}{20}
-    \begin{tikzpicture}
-      \def\couleur{alerted text.fg}
-      \path[coordinate] (0,0)  coordinate(A)
-                  ++( 90:5cm) coordinate(B)
-                  ++(0:5cm) coordinate(C)
-                  ++(-90:5cm) coordinate(D);
-      \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) --(D) -- cycle;
-      \foreach \x in {1,...,40}{%
-          \pgfmathsetcounter{density}{\thedensity+20}
-          \setcounter{density}{\thedensity}
-          \path[coordinate] coordinate(X) at (A){};
-          \path[coordinate] (A) -- (B) coordinate[pos=.10](A)
-                              -- (C) coordinate[pos=.10](B)
-                              -- (D) coordinate[pos=.10](C)
-                              -- (X) coordinate[pos=.10](D);
-          \draw[fill=\couleur!\thedensity] (A)--(B)--(C)-- (D) -- cycle;
-      }
-    \end{tikzpicture}
-    \caption{Rotated square from
-    \href{http://www.texample.net/tikz/examples/rotated-polygons/}{texample.net}.}
-  \end{figure}
-\end{frame}
-\begin{frame}{Tables}
-  \begin{table}
-    \caption{Largest cities in the world (source: Wikipedia)}
-    \begin{tabular}{lr}
-      \toprule
-      City & Population\\
-      \midrule
-      Mexico City & 20,116,842\\
-      Shanghai & 19,210,000\\
-      Peking & 15,796,450\\
-      Istanbul & 14,160,467\\
-      \bottomrule
-    \end{tabular}
-  \end{table}
-\end{frame}
-\begin{frame}{Blocks}
-  Three different block environments are pre-defined and may be styled with an
-  optional background color.
-
-  \begin{columns}[T,onlytextwidth]
-    \column{0.5\textwidth}
-      \begin{block}{Default}
-        Block content.
-      \end{block}
-
-      \begin{alertblock}{Alert}
-        Block content.
-      \end{alertblock}
-
-      \begin{exampleblock}{Example}
-        Block content.
-      \end{exampleblock}
-
-    \column{0.5\textwidth}
-
-      \metroset{block=fill}
-
-      \begin{block}{Default}
-        Block content.
-      \end{block}
-
-      \begin{alertblock}{Alert}
-        Block content.
-      \end{alertblock}
-
-      \begin{exampleblock}{Example}
-        Block content.
-      \end{exampleblock}
-
-  \end{columns}
-\end{frame}
-\begin{frame}{Math}
-  \begin{equation*}
-    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
-  \end{equation*}
-\end{frame}
-\begin{frame}{Line plots}
-  \begin{figure}
-    \begin{tikzpicture}
-      \begin{axis}[
-        mlineplot,
-        width=0.9\textwidth,
-        height=6cm,
-      ]
-
-        \addplot {sin(deg(x))};
-        \addplot+[samples=100] {sin(deg(2*x))};
-
-      \end{axis}
-    \end{tikzpicture}
-  \end{figure}
-\end{frame}
-\begin{frame}{Bar charts}
-  \begin{figure}
-    \begin{tikzpicture}
-      \begin{axis}[
-        mbarplot,
-        xlabel={Foo},
-        ylabel={Bar},
-        width=0.9\textwidth,
-        height=6cm,
-      ]
-
-      \addplot plot coordinates {(1, 20) (2, 25) (3, 22.4) (4, 12.4)};
-      \addplot plot coordinates {(1, 18) (2, 24) (3, 23.5) (4, 13.2)};
-      \addplot plot coordinates {(1, 10) (2, 19) (3, 25) (4, 15.2)};
-
-      \legend{lorem, ipsum, dolor}
-
-      \end{axis}
-    \end{tikzpicture}
-  \end{figure}
-\end{frame}
-\begin{frame}{Quotes}
-  \begin{quote}
-    Veni, Vidi, Vici
-  \end{quote}
-\end{frame}
-
-{%
-\setbeamertemplate{frame footer}{My custom footer}
-\begin{frame}[fragile]{Frame footer}
-    \themename defines a custom beamer template to add a text to the footer. It can be set via
-    \begin{verbatim}\setbeamertemplate{frame footer}{My custom footer}\end{verbatim}
-\end{frame}
-}
-
-\begin{frame}{References}
-  Some references to showcase [allowframebreaks] \cite{knuth92,ConcreteMath,Simpson,Er01,greenwade93}
-\end{frame}
-
-\section{Conclusion}
-
-\begin{frame}{Summary}
-
-  Get the source of this theme and the demo presentation from
-
-  \begin{center}\url{github.com/matze/mtheme}\end{center}
-
-  The theme \emph{itself} is licensed under a
-  \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons
-  Attribution-ShareAlike 4.0 International License}.
-
-  \begin{center}\ccbysa\end{center}
-
-\end{frame}
-
-\begin{frame}[plain]
-  Questions?
-\end{frame}
 
 
 
