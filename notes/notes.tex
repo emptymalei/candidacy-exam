@@ -220,6 +220,69 @@ The story line should be
 \end{enumerate}
 
 
+\section{Tell the Story of Stimulated Neutrino Oscillations}
+
+
+Questions expected
+
+\begin{itemize}
+    \item Is is really stimulated? Compared to what?
+    \item Phase in matter profile is not related to the final result? I am not quite sure here because a redefinition of coordinate will cause two constant phase shift that have different signs in the two off-diagonal terms. 
+    
+    RWA in fact shows that the phase term is only the coupling between different orders of the effects.
+    
+    The numerical results are not really related to this phase. Probably an approximation. {\color{red}NEED SOME PROOF.}
+\end{itemize}
+
+
+
+\subsection{How to Introduce the Solution I Had}
+
+First of all, the Hamiltonian we are dealing with is
+
+\begin{equation*}
+\mathbf H = - \frac{\omega_m}{2}\boldsymbol{\sigma_3} + \frac{\delta \lambda}{2} \cos 2\theta_m \boldsymbol{\sigma_3} - \frac{\delta \lambda}{2} \sin \theta_m \boldsymbol{\sigma_1},
+\end{equation*}
+
+where the matter profile we used is
+
+\begin{equation*}
+    \lambda(x) = \lambda_0 + \delta \lambda(x).
+\end{equation*}
+
+
+I need to explain what basis I will use, a basis where the wave function is related to the background matter basis through
+
+\begin{equation*}
+    \begin{pmatrix} \psi_1 \\ \psi_2 \end{pmatrix} = \begin{pmatrix} e^{-i \eta (x)} & 0 \\  0 & e^{-i \eta (x)}  \end{pmatrix} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}.
+\end{equation*}
+
+Why? I need to remove the position dependence of the diagonal term. \footnote{
+{\color{red} I am not actually sure what is the advantage of this basis. I just found it and it worked.}
+}
+
+I can solve out the unitary "rotation" matrix of the wave function.
+
+\begin{equation*}
+    \eta(x) - \eta(0) = - \frac{\omega_m}{2} x + \frac{\cos 2\theta_m}{2} \int_0^x \delta\lambda (\tau) d\tau.
+\end{equation*}
+
+
+
+\subsection{Rabi Oscillation}
+
+Rabi oscillation Hamiltonian
+
+\begin{equation*}
+    \mathbf H = \begin{pmatrix}
+    E_1 &  h \\
+    h^* & E_2 \\
+    \end{pmatrix}.
+\end{equation*}
+
+
+
+
 
 
 

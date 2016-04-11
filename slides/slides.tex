@@ -41,8 +41,8 @@
 \newcommand{\ket}[1]{\left| #1\right\rangle}
 \newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
 \newcommand{\avg}[1]{\left< #1 \right>}
-
 \newcommand{\ii}{\mathrm{i}}
+\DeclareMathOperator{\sech}{sech}
 
 
 
@@ -848,9 +848,6 @@ Matching of $l_v$, and $l_k$?
 
 
 
-\section{Stimulated Neutrino Oscillations}
-
-
 \begin{frame}{Stimulated Neutrino Oscillations}
 
 % invisible overlay because it is an OVERLAY!!!
@@ -930,29 +927,261 @@ ${\color{red}\delta\lambda(x)}$ is the problem here.
 
 
 
-\begin{frame}{Stimulated Neutrino Oscillations: Math}
 
-\begin{tcolorbox}[title=A Better Basis to Work in?]
+\section{Understanding Stimulated Oscillations}
 
-Remove the position dependence of the diagonalized part of the Hamiltonian!
 
-New basis where the wave function $(\psi_{p1},\psi_{p2})^T$ is related to the wave function in background matter basis
+\subsection{Hamiltonian, and Basis}
+
+\begin{frame}{Understanding Stimulated Oscillations}
+
+\begin{tcolorbox}[title=A Better Basis]
+
+{\color{red}
+Remove the position dependence of the diagonalized part of the Hamiltonian BY CHOOSING A NEW BASIS!
+}
+
+New basis where the wave function $(\psi_{p1},\psi_{p2})^T$ is related to the wave function in background matter basis through
 
 \begin{equation*}
     \begin{pmatrix}
-    \psi_1
+    \psi_1 \\
+    \psi_2
+    \end{pmatrix} = \begin{pmatrix}
+     e^{-i \eta (x)} & 0 \\  0 & e^{-i \eta (x)} 
+    \end{pmatrix}\begin{pmatrix}
+    \psi_{p1}\\
+    \psi_{p2}
+    \end{pmatrix},
+\end{equation*}
+
+where
+
+\begin{equation*}
+    \eta(x) - \eta(0) = - \frac{\omega_m}{2} x + \frac{\cos 2\theta_m}{2} \int_0^x \delta\lambda (\tau) d\tau.
+\end{equation*}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Transition Probability in Background Basis]
+
+\begin{equation*}
+    P_{1 \to 2} (x) = \left\lvert e^{i\eta} \psi_{p2} (x) \right \rvert^2 = \left\lvert \psi_{p2} (x)  \right\rvert^2 .
+\end{equation*}
+
+\end{tcolorbox}
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{Understanding Stimulated Oscillations}
+
+
+
+
+
+% Background matter basis
+\begin{itemize}
+\item Hamiltonian in Background Matter Basis
+    \begin{equation*}
+    \mathbf {H_0} = \frac{1}{2}\left( - \omega_m + {\color{red}\delta \lambda(x)} \cos 2\theta_m \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin \theta_m \boldsymbol{\sigma_1}.
+\end{equation*}
+
+\item Hamiltonian in New Basis
+\begin{equation*}
+    \mathbf{H_p} = - \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_m \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} 
+\end{equation*}    
+
+\end{itemize}
+
+
+\only<2-2>{
+
+\begin{tcolorbox}[title=Rabi Oscillation]
+
+Rabi oscillation Hamiltonian
+
+\begin{equation*}
+    \begin{pmatrix}
+    E_1 & W \\
+    W^* & E_2
+    \end{pmatrix},
+\end{equation*}
+
+where $W$ is periodic, e.g., $e^{i k x}$.
+
+\end{tcolorbox}
+
+}
+
+\only<3->{
+
+
+\begin{tcolorbox}[title=Off-diagonal Term in Our System]
+
+\begin{equation*}
+e^{2i\eta (x)},
+\end{equation*}
+
+where
+\begin{equation*}
+\eta(x) - \eta(0) = - \frac{\omega_m}{2} x + \frac{\cos 2\theta_m}{2} \int_0^x {\color{red} \delta\lambda (\tau) }  d\tau.
+\end{equation*}
+
+\end{tcolorbox}
+
+}
+
+
+
+\end{frame}
+
+
+\subsection{Single Frequency Matter Profile}
+
+\begin{frame}{Single Frequency Matter Profile}
+
+
+\begin{columns}[T]
+\begin{column}{0.55\textwidth}
+
+\begin{tcolorbox}[title=Matter Profile]
+
+\begin{equation*}
+    \lambda(x) = \lambda_0 + {\color{red} A \sin (k x)},
+\end{equation*}
+
+which leads to
+
+\begin{equation*}
+    {\color{violet}\eta(x)} = - \frac{\omega_m}{2}x {\color{blue}- \frac{\cos 2\theta_m}{2} \frac{A}{k} \cos (k x )}.
+\end{equation*}
+
+\end{tcolorbox}
+\end{column}%
+
+\begin{column}{0.45\textwidth}
+
+\begin{tcolorbox}[title=Hamiltonian in New Basis]
+
+\begin{equation*}
+    -\frac{ {\color{red}\delta \lambda(x)}  }{2}\begin{pmatrix}
+    0 & e^{2i {\color{violet}\eta(x)}  }\\
+    e^{-2i {\color{violet}\eta(x)} } & 0
     \end{pmatrix}
 \end{equation*}
 
 \end{tcolorbox}
+
+\end{column}
+
+\end{columns}
+
+The system can be (approximately) solved using Jacobi-Anger expansion
+
+\begin{equation*}
+e^{i z \cos (\Phi)} = \sum_{n=-\infty}^\infty i^n J_n(z) e^{i n\Phi}.
+\end{equation*}
+
+
+
+
+
+\end{frame}
+
+
+\begin{frame}{Single Frequency Matter Profile}
+
+\begin{tcolorbox}[title=Rotation Wave Approximation]
+
+The off-diagonal element of Hamiltonian
+
+\begin{equation*}
+     \sum_{n=-\infty}^{\infty} \frac{1}{2} B_n e^{i  {\color{magenta} (nk-\omega_m) } x},
+\end{equation*}
+
+where $B_n =  - (-i)^n  n A\sin 2\theta_m  J_n (z_k) /z_k$.
+
+
+${\color{magenta} (nk-\omega_m) }$ $\to$ perturbation frequency in matter profile for each component.
+
+
+\centering
+RWA: small ${\color{magenta} (nk-\omega_m) }$ $\to$ important term
+
+\end{tcolorbox}
+
+
+
+
 
 \end{frame}
 
 
 
 
+\begin{frame}{Single Frequency Matter Profile}
 
-\section{Understanding Stimulated Oscillations}
+
+\begin{tcolorbox}[title=Transition Probability]
+
+RWA $\to$ analytically solvable equation
+
+\begin{equation*}
+    P_{1\to 2} = \frac{ \lvert  \omega_m \Gamma/2 \rvert^2 }{ q ^2  } \sin^2 \left( \frac{q}{2} x \right)  ,
+\end{equation*}
+
+where
+
+\begin{align*}
+    q^2 &= \left\lvert  \omega_m \Gamma/2 \right\rvert^2 + ( n_0 \hat k - 1 )^2,\qquad \text{frequency of oscillations} \\
+    \Gamma &= \left\lvert  B_{n_0} \right\rvert, \qquad \text{width of resonance ($nk$ as parameter)}
+\end{align*}
+
+
+\end{tcolorbox}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}{Single Frequency Matter Profile}
+
+
+
+\begin{tcolorbox}[title=Why Does RWA Work?]
+
+\begin{equation*}
+    B_n \propto J_n(n \sech \alpha) \sim \frac{ e^{n(\tanh\alpha - \alpha)} }{2\pi n \tanh \alpha}, \qquad \text{for large } n
+\end{equation*}
+
+leads to
+
+\begin{equation*}
+    \Gamma \propto B_n \propto \frac{ e^{n ( \tanh \alpha - \alpha )} }{\sqrt{2\pi n_0 \tanh \alpha} } 
+\end{equation*}
+
+Drops fast at large $n$.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{assets/stimulated-probability-apmlitude-vs-k-resonance-width}
+\caption*{Width of the resonances for $A=0.1$, $\theta_m = \pi/5$.\color{red}NEED Larger Font in Graph.}
+\end{figure}
+
+\end{tcolorbox}
+
+
+
+\end{frame}
+
+
+
 
 
 
