@@ -9,6 +9,8 @@
 %\usepackage[scale=2]{ccicons}
 \usepackage{tcolorbox}
 
+%\usepackage{floatrow}
+
 %\usepackage{minted}
 %\usemintedstyle{trac}
 
@@ -867,26 +869,14 @@ Matching of $l_v$, and $l_k$?
 
 
 
-\begin{frame}{Stimulated Neutrino Oscillations}
-
-% invisible overlay because it is an OVERLAY!!!
-\setbeamercovered{invisible}
-
-% I need a graph that illustrates the stimulation by comparing Constant matter potential and periodic matter potential.
-
-\begin{figure}
-\includegraphics[width=0.8\textwidth]{assets/stimulated-neutrino-oscillations-kneller.png}
-\caption*{ Kneller, McLaughlin, \& Patton, 2015.
-{\color{red}NEED A Better graph to compare the constant background oscillation and the stimulated oscillation}
-}
-\end{figure}
-
     
-\end{frame}
+
 
 
 \begin{frame}{Stimulated Neutrino Oscillations}
 
+
+\only<1-1,3->{
 % Matter profile
 \begin{tcolorbox}[title=Matter Profile]
 \begin{equation*}
@@ -919,11 +909,28 @@ Background matter basis: Hamiltonian is diagonalized with only background matter
 
 \end{tcolorbox}
 
+}
+
+\only<2-2>{
+
+\begin{tcolorbox}
+Kneller, J. P., McLaughlin, G. C., \& Patton, K. M. (2013). J. Phys. G: Nucl. Part. Phys. {\bf{40}} (2013) 055002.
+\end{tcolorbox}
+
+
+\begin{figure}
+\includegraphics[width=0.85\textwidth]{assets/stimulated-oscillation-phenomenon.png}
+%stimulated-neutrino-oscillations-kneller.png}
+\caption*{Stimulated oscillation}
+\end{figure}
+
+
+}
 
 
 
 %%% A text block that should be displayed later
-\only<2->{
+\only<3->{
 \begin{textblock*}{64mm}(32mm,0.4\textheight)
 
 \begin{tcolorbox}
@@ -943,6 +950,9 @@ ${\color{red}\delta\lambda(x)}$ is the problem here.
 
 
 \end{frame}
+
+
+
 
 
 
@@ -1193,11 +1203,11 @@ where
 
 \begin{frame}{Single Frequency Matter Profile}
 
-\begin{tcolorbox}[title=PLACEHOLDER]
-
-\color{red} PROVE THAT THIS APPROXIMATION WORKS!
-
-\end{tcolorbox}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/stimulated-oscillation-rwa-and-numerical.png}
+    \caption*{RWA works. $\hat A=0.1$, $\hat k=0.995$, $\theta_m=\pi/6$}
+\end{figure}
 
 \end{frame}
 
@@ -1299,7 +1309,7 @@ NEED A GRAPH TO EXPLAIN WHY FOR A SPECIFIC n WE ONLY TAKE THE ONE THAT IS MOST C
 Apply Jacobi-Anger expansion,
 
 \begin{equation*}
-\hat h  = \sum_{n_1=-\infty}^\infty \sum_{n_2=-\infty}^{\infty}  \frac{1}{2} \hat B_{n_1,n_2}(n_1,n_2)
+\hat h  = \sum_{n_1=-\infty}^\infty \sum_{n_2=-\infty}^{\infty}  \frac{1}{2} \hat B_{n_1,n_2}(\hat k_1,\hat k_2)
  e^{i(n_1 \hat k_1 + n_2 \hat k_2 - 1)\hat x},
 \end{equation*}
 
@@ -1365,7 +1375,27 @@ Resonance width for each point on resonance lines.
 \end{tcolorbox}
 }
 
-\only<2->{
+\only<2-2>{
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{assets/density-plot-of-transition-amplitudes-demonstration.png}
+    \caption*{Density plot of transition amplitudes calculated using only one term out of the whole summation in Hamiltonian. $n_1,n_2\in [-2, 2]$}
+\end{figure}
+
+\begin{textblock*}{64mm}(70mm,0.01\textheight)
+\tiny
+\begin{equation*}
+\hat h  = \sum_{n_1} \sum_{n_2}  \frac{1}{2} \hat B_{n_1,n_2}(\hat k_1, \hat k_2)
+ e^{i(n_1 \hat k_1 + n_2 \hat k_2 - 1)\hat x},
+\end{equation*}
+\normalsize
+\end{textblock*}
+
+}
+
+
+\only<3->{
 \begin{figure}
     \centering
     \includegraphics[width=0.75\textwidth]{assets/stimulated-2-freq-width-diagram.png}
@@ -1414,12 +1444,57 @@ Q_2 = \frac{d}{\Gamma_2}.
 
 \begin{frame}{Two-frequency Matter Profile}
 
-\begin{tcolorbox}[title=PLACEHOLDER]
 
-\color{red}
-PLOTS SHOWING THAT THIS RATIO IS THE ONE TO DETERMINE WHICH TERM TO INCLUDE.
 
-\end{tcolorbox}
+\only<1-1>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/q-ordering-1.png}
+    \caption*{}
+\end{figure}
+}
+
+
+\only<2-2>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/q-ordering-2.png}
+    \caption*{}
+\end{figure}
+}
+
+
+\only<3-3>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/q-ordering-3.png}
+    \caption*{}
+\end{figure}
+}
+
+\only<4-4>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/q-ordering-4.png}
+    \caption*{}
+\end{figure}
+}
+
+\only<5-5>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/q-ordering-5.png}
+    \caption*{}
+\end{figure}
+}
+
+\only<6-6>{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/2-freq-numerical-and-first-5-rwa.png}
+    \caption*{}
+\end{figure}
+}
 
 \end{frame}
 
