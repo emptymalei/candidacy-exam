@@ -12,6 +12,10 @@
 %\usepackage{minted}
 %\usemintedstyle{trac}
 
+% For the 68 colors
+\usepackage{xcolor}
+\definecolor{ao}{rgb}{0.0, 0.5, 0.0}
+
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
 
@@ -140,7 +144,7 @@
 
 \title{Neutrino Oscillations in Matter}
 \subtitle{PhD Candidacy Exam}
-\date{\today}
+\date{April 19, 2016}
 \author{Lei Ma\\
 {\bf{Supervisor}}: Huaiyu Duan}
 \institute{Department of Physics\\
@@ -154,7 +158,7 @@ UNM}
     \frame{\titlepage}
   }
 
-\maketitle
+%\maketitle % The reason why two title pages
 
 \begin{frame}{Outline}
   \setbeamertemplate{section in toc}[sections numbered]
@@ -269,6 +273,9 @@ UNM}
 
 \setbeamercovered{invisible}
 
+
+\only<1-1>{
+
 \begin{tcolorbox}
 \begin{equation*}
   \equalto{\textbf{\large Neutrino Oscillation} }{ \textbf{\large Neutrino Flavor Conversion } }
@@ -283,6 +290,18 @@ UNM}
     \caption*{Neutrino Oscillation}
 \end{figure}
 
+}
+
+
+\only<2-2>{
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/vacuum-oscillations-3-flavor.png}
+    \caption*{Survival probability}
+\end{figure}
+
+}
 
 
 
@@ -751,7 +770,7 @@ where
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth]{assets/msw_and_density.png}
-\caption*{ $n_e^R$ is the resonance density. Yellow bar is the resonance point. Smirnov, 2003.}
+\caption*{Yellow bar is the resonance point. Smirnov, 2003.}
 \label{fig:msw_and_density}
 \end{figure}
 
@@ -1087,34 +1106,56 @@ e^{i z \cos (\Phi)} = \sum_{n=-\infty}^\infty i^n J_n(z) e^{i n\Phi}.
 \end{equation*}
 
 
-
-
-
 \end{frame}
+
+
 
 
 \begin{frame}{Single Frequency Matter Profile}
 
+\only<1-1>{
+\begin{tcolorbox}[title=Scaled Quantities]
+Characteristic scale: $\omega_m$
+
+
+
+\begin{itemize}
+\item $\hat A = A/\omega_m$
+    \item $\hat k = k/\omega_m$
+    \item $\hat x = \omega x$
+\end{itemize}
+\end{tcolorbox}
+}
+
+
+
+\only<2-2>{
 \begin{tcolorbox}[title=Rotation Wave Approximation]
 
 The off-diagonal element of Hamiltonian
 
 \begin{equation*}
-     \sum_{n=-\infty}^{\infty} \frac{1}{2} B_n e^{i  {\color{magenta} (nk-\omega_m) } x},
+\hat h= \sum_{n=-\infty}^{\infty} \frac{1}{2} \hat B_n e^{i  {\color{magenta} (n\hat k-1) } \hat x},
 \end{equation*}
 
-where $B_n =  - (-i)^n  n A\sin 2\theta_m  J_n (z_k) /z_k$.
+where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_m  J_n ( \hat A \cos 2\theta_m / \hat k ) $.
 
 
-${\color{magenta} (nk-\omega_m) }$ $\to$ perturbation frequency in matter profile for each component.
-
-
-\centering
-RWA: small ${\color{magenta} (nk-\omega_m) }$ $\to$ important term
+${\color{magenta} (n \hat k-1) }$ $\to$ perturbation frequency in matter profile for each component.
 
 \end{tcolorbox}
 
 
+\begin{tcolorbox}[title=Which $n$ to Choose]
+\centering
+RWA: small ${\color{magenta} (n\hat k-1)}$ $\to$ important term
+
+\centering
+Find integer $n_0 = \mathrm{Round}\left[ 1/\hat k \right]$ that minimizes ${\color{magenta} n\hat k -1}$.
+
+\end{tcolorbox}
+
+}
 
 
 
@@ -1131,18 +1172,77 @@ RWA: small ${\color{magenta} (nk-\omega_m) }$ $\to$ important term
 RWA $\to$ analytically solvable equation
 
 \begin{equation*}
-    P_{1\to 2} = \frac{ \lvert  \omega_m \Gamma/2 \rvert^2 }{ q ^2  } \sin^2 \left( \frac{q}{2} x \right)  ,
+    P_{1\to 2} = \frac{ \lvert \Gamma/2 \rvert^2 }{ q ^2  } \sin^2 \left( \frac{q}{2} x \right)  ,
 \end{equation*}
 
 where
 
 \begin{align*}
-    q^2 &= \left\lvert  \omega_m \Gamma/2 \right\rvert^2 + ( n_0 \hat k - 1 )^2,\qquad \text{frequency of oscillations} \\
-    \Gamma &= \left\lvert  B_{n_0} \right\rvert, \qquad \text{width of resonance ($nk$ as parameter)}
+    q^2 &= \left\lvert  \Gamma/2 \right\rvert^2 + ( n_0 \hat k - 1 )^2,\qquad \text{frequency of oscillations} \\
+    \Gamma &= \left\lvert \hat B_{n_0} \right\rvert, \qquad \text{width of resonance ($nk$ as parameter)} \\
+    n_0 &= \mathrm{Round}\left[ 1/\hat k \right]
 \end{align*}
 
 
 \end{tcolorbox}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Single Frequency Matter Profile}
+
+\begin{tcolorbox}[title=PLACEHOLDER]
+
+\color{red} PROVE THAT THIS APPROXIMATION WORKS!
+
+\end{tcolorbox}
+
+\end{frame}
+
+
+
+\begin{frame}{Single Frequency Matter Profile}
+
+
+\only<1-1>{
+
+\begin{tcolorbox}[title=Why Does RWA Work?]
+
+Hamiltonian off-diagonal element amplitude
+
+\begin{equation*}
+    \hat B_n \propto n J_n(n \sech \alpha) \sim \sqrt{n} \frac{ e^{ - n(\alpha -\tanh\alpha )} }{ \sqrt{ 2\pi  \tanh \alpha } }, \quad \text{for large } n
+\end{equation*}
+
+where $\sech\alpha = \hat A\cos 2\theta_m$.
+
+$\Rightarrow$
+
+\begin{equation*}
+    \Gamma \propto \hat B_n \propto \frac{ e^{ - n ( \alpha - \tanh \alpha )} }{\sqrt{2\pi n_0 \tanh \alpha} } 
+\end{equation*}
+
+Small perturbation $\Rightarrow$ Small $\hat A$ $\Rightarrow$ Large $\alpha$ $\Rightarrow$ Drops fast at large $n$.
+
+
+\end{tcolorbox}
+}
+
+\end{frame}
+
+
+
+\begin{frame}{Single Frequency Matter Profile}
+
+
+\begin{tcolorbox}[title=PLACEHOLDER]
+\color{red}
+NEED A GRAPH TO EXPLAIN WHY FOR A SPECIFIC n WE ONLY TAKE THE ONE THAT IS MOST CLOSE TO RESONANCE!!!
+
+\end{tcolorbox}
+
 
 
 \end{frame}
@@ -1154,27 +1254,217 @@ where
 
 
 
-\begin{tcolorbox}[title=Why Does RWA Work?]
 
-\begin{equation*}
-    B_n \propto J_n(n \sech \alpha) \sim \frac{ e^{n(\tanh\alpha - \alpha)} }{2\pi n \tanh \alpha}, \qquad \text{for large } n
-\end{equation*}
-
-leads to
-
-\begin{equation*}
-    \Gamma \propto B_n \propto \frac{ e^{n ( \tanh \alpha - \alpha )} }{\sqrt{2\pi n_0 \tanh \alpha} } 
-\end{equation*}
-
-Drops fast at large $n$.
+\only<1-1>{
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{assets/stimulated-probability-apmlitude-vs-k-resonance-width}
-\caption*{Width of the resonances for $A=0.1$, $\theta_m = \pi/5$.\color{red}NEED Larger Font in Graph.}
+\includegraphics[width=0.9\textwidth]{assets/stimulated-single-frequency-width-nk-orders.png}
+\caption*{Width of the resonances for $A=0.1$, $\theta_m = \pi/5$. Each width is a parameter of $n \hat k$.}
 \end{figure}
 
+}
+
+
+\only<2-2>{
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{assets/stimulated-single-frequency-resonances-k-orders.png}
+\caption*{Transition probability amplitude as a function of $\omega_m/\hat k$  (the phase is $(n - \omega_m/k)$). The colors represent different orders of $n_0$.}
+\end{figure}
+
+}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Two-frequency Matter Profile}
+
+
+\only<1-1>{
+\begin{tcolorbox}[title=Matter Profile]
+
+\begin{equation*}
+    \lambda(x) = \lambda_0 + \color{red}\delta\lambda(x),\quad     \color{red}\delta \lambda(x) = A_1 \sin (k_1 x) +  A_2 \sin (k_2 x).
+\end{equation*}
 \end{tcolorbox}
+}
+
+\only<2->{
+\begin{tcolorbox}[title=Hamiltonian Off-diagonal Element]
+
+Apply Jacobi-Anger expansion,
+
+\begin{equation*}
+\hat h  = \sum_{n_1=-\infty}^\infty \sum_{n_2=-\infty}^{\infty}  \frac{1}{2} \hat B_{n_1,n_2}(n_1,n_2)
+ e^{i(n_1 \hat k_1 + n_2 \hat k_2 - 1)\hat x},
+\end{equation*}
+
+where
+
+\begin{align*}
+&\hat B_{n_1,n_2}( \hat k_1,\hat k_2)\\
+= & -(-i)^{n_1+n_2} ( n_1 \hat k_1 + n_2 \hat k_2 ) J_{n_1}\left( \frac{\hat A_1\cos 2\theta_m}{\hat k_1} \right) J_{n_2}\left( \frac{\hat A_2\cos 2\theta_m}{\hat k_2} \right) 
+\end{align*}
+
+
+\end{tcolorbox}
+}
+
+
+\only<3->{
+\begin{tcolorbox}
+\centering
+\color{red}Which terms are important?
+\end{tcolorbox}
+
+}
+
+\only<2->{
+
+\begin{textblock*}{64mm}(68mm,0.01\textheight)
+
+\small
+\begin{equation*}
+\hat h=\sum_{n=-\infty}^{\infty} \frac{1}{2} \hat B_n e^{i  {\color{magenta} (n\hat k-1) } \hat x},
+\end{equation*}
+\normalsize
+
+\end{textblock*}
+
+
+}
+
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{Two-frequency Matter Profile}
+
+\only<1-1>{
+\begin{tcolorbox}[title=Resonance Lines]
+
+There are still resonances, i.e., (almost) zero phases, on lines
+
+\begin{equation*}
+    n_{1,0} \hat k_1 + n_{2,0} \hat k_2 -1 =0
+\end{equation*}
+
+in $\{\hat k_1,\hat k_2\}$ plane. 
+{\centering
+$\Rightarrow$
+}
+Resonance width for each point on resonance lines.
+
+\end{tcolorbox}
+}
+
+\only<2->{
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{assets/stimulated-2-freq-width-diagram.png}
+    \caption*{Resonance line, distance to resonance, and width}
+\end{figure}
+}
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{Two-frequency Matter Profile}
+
+
+\begin{tcolorbox}[title=Width]
+
+\begin{equation*}
+    \Gamma_2 = \frac{\hat B_{n_1,n_2}(\hat k_{1,\mathrm{intercept}}, \hat k_{2,\mathrm{intercept}})}{\sqrt{n_1^2 + n_2^2}}.
+\end{equation*}
+
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[title=Distance to Resonance Line]
+
+\begin{equation*}
+d = \frac{\lvert n_1 \hat k_{10} + n_2 \hat k_{20} - 1 \rvert}{\sqrt{n_1^2 + n_2^2} }.
+\end{equation*}
+
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[title=Distance to Resonance Width Ratio]
+
+\begin{equation*}
+Q_2 = \frac{d}{\Gamma_2}.    
+\end{equation*}
+
+
+\end{tcolorbox}
+
+\end{frame}
+
+
+\begin{frame}{Two-frequency Matter Profile}
+
+\begin{tcolorbox}[title=PLACEHOLDER]
+
+\color{red}
+PLOTS SHOWING THAT THIS RATIO IS THE ONE TO DETERMINE WHICH TERM TO INCLUDE.
+
+\end{tcolorbox}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Summary & Outlook/Future Work %%%%%%%%%%%%%%
+
+% You should see now what I am trying to do here.
+% In reality, a matter profile can be decomposed into many Fourier modes. If we can find a way to determine which terms are important, it would be very useful for more complicated calculations such as the combination of COLLECTIVE neutrino oscillations and matter effect.
+% Rather easy to numerically solve such systems. However, it is also good to learn the physics behind numerical calculation. Look into the most important term.
+
+\section{Summary \& Future Work}
+
+\begin{frame}{Summary \& Future Work}
+
+
+
+\begin{itemize}\color{ao}
+\item 
+Matter interaction depends on matter profile
+\item
+Single frequency periodic matter profile can be approximated using lowest order of RWA.
+\item
+Two frequency periodic matter profile can be calculated using some lowest orders of RWA.
+
+\end{itemize}
+
+
+
+\begin{itemize}\color{red}
+ \item 
+ Multi-frequency matter profile
+ 
+\end{itemize}
+
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{Acknowledgement}
 
 
 
