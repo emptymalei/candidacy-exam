@@ -311,23 +311,26 @@ UNM}
 \end{frame}
 
 
+\subsection{Solar Neutrino Problem}
+
 \begin{frame}{Solar Neutrinos}
 
 \begin{tcolorbox}[title=Solar Neutrinos]
-
-\begin{equation*}
-    4 \mathrm p \to {}^4 \mathrm{He} + 2\mathrm{e^+} + 2\mathrm{\nu_e}
-\end{equation*}
-
+{\color{gray}pp chain}, $\mathrm{{}^7Be}$, $\mathrm{{}^8B}$, pep, CNO
 \end{tcolorbox}
 
-
-
 \begin{figure}
-\centering
-\includegraphics[width=0.8\textwidth]{assets/colortheoryvsexp.png}
-\caption*{Less electron flavor neutrinos observed in experiments than the Standard Solar Model prediction. Bahcall \& Serendelli, 2005}
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/chlorine-detector-solar-neutrinos.jpg} %https://ase.tufts.edu/cosmos/print_images.asp?id=37
+    \caption*{Chlorine detector (Homestake experiment) results and theory predictions. SNU: 1 event for $10^{36}$ target atoms per second.}
 \end{figure}
+
+
+% \begin{figure}
+% \centering
+% \includegraphics[width=0.8\textwidth]{assets/colortheoryvsexp.png}
+% \caption*{Less electron flavor neutrinos observed in experiments than the Standard Solar Model prediction. Bahcall \& Serendelli, 2005}
+% \end{figure}
 
 
     
@@ -338,6 +341,7 @@ UNM}
 
 %%%%%% Why Neutrinos Oscillate? %%%%%%%%%
 
+\subsection{Why Oscillations}
 
 % For every picture that defines or uses external nodes, you'll have to
 % apply the 'remember picture' style. To avoid some typing, we'll apply
@@ -708,26 +712,16 @@ where
 \end{tcolorbox}
 
 
-\only<2->{
+% \only<2->{
+% \begin{itemize}
+%     \item Oscillation amplitude depends on $\theta_m$
+%     \item Oscillation angular frequency is
+% \begin{equation*}
+%     \omega_m \geq \omega_v \sin 2\theta_v
+% \end{equation*}
 
-
-
-\begin{itemize}
-    \item Oscillation amplitude depends on
-    
-
-
-\item Oscillation angular frequency is
-
-\begin{equation*}
-    \omega_m \geq \omega_v \sin 2\theta_v
-\end{equation*}
-
-
-
-\end{itemize}
-
-}
+% \end{itemize}
+% }
 
 
 \end{frame}
@@ -802,7 +796,7 @@ Parametric Effect, Parametric Resonance?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Stimulated Effect/Multi-frequency stimulation %%%%%%%%%%%%%%%
 
-\subsection{Stimulated Neutrino Oscillation}
+\subsection{Stimulated Neutrino Oscillations}
 
 \begin{frame}{Length Scales}
 
@@ -853,7 +847,7 @@ $$\omega_m = \omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos 2\theta_v \rig
 
 \begin{tcolorbox}
 
-Matching of $l_v$, and $l_k$?
+Matching of $l_m$, and $l_k$?
 
 \end{tcolorbox}
 
@@ -903,7 +897,7 @@ Background matter basis: Hamiltonian is diagonalized with only background matter
 \begin{tcolorbox}[title=Hamiltonian]
 
 \begin{equation*}
-    \mathbf H = \frac{1}{2}\left( - \omega_m + {\color{red}\delta \lambda(x)} \cos 2\theta_m \right) \boldsymbol{\sigma_3} - \frac{\delta \lambda}{2} \sin \theta_m \boldsymbol{\sigma_1}.
+    \mathbf H = \frac{1}{2}\left( - \omega_m + {\color{red}\delta \lambda(x)} \cos 2\theta_m \right) \boldsymbol{\sigma_3} - \frac{{\color{red}\delta \lambda(x) } }{2} \sin \theta_m \boldsymbol{\sigma_1}.
 \end{equation*}
 
 
@@ -921,7 +915,7 @@ Kneller, J. P., McLaughlin, G. C., \& Patton, K. M. (2013). J. Phys. G: Nucl. Pa
 \begin{figure}
 \includegraphics[width=0.85\textwidth]{assets/stimulated-oscillation-phenomenon.png}
 %stimulated-neutrino-oscillations-kneller.png}
-\caption*{Stimulated oscillation}
+\caption*{Stimulated oscillation. $\delta \lambda(x) = A \sin (k x)$}
 \end{figure}
 
 
@@ -977,7 +971,7 @@ New basis where the wave function $(\psi_{p1},\psi_{p2})^T$ is related to the wa
     \psi_1 \\
     \psi_2
     \end{pmatrix} = \begin{pmatrix}
-     e^{-i \eta (x)} & 0 \\  0 & e^{-i \eta (x)} 
+     e^{-i \eta (x)} & 0 \\  0 & e^{i \eta (x)} 
     \end{pmatrix}\begin{pmatrix}
     \psi_{p1}\\
     \psi_{p2}
@@ -1010,7 +1004,7 @@ where
 
 
 
-
+\only<1->{
 
 % Background matter basis
 \begin{itemize}
@@ -1025,10 +1019,12 @@ where
 \end{equation*}    
 
 \end{itemize}
+}
 
 
-\only<2-2>{
 
+
+\only<1>{
 \begin{tcolorbox}[title=Rabi Oscillation]
 
 Rabi oscillation Hamiltonian
@@ -1046,7 +1042,7 @@ where $W$ is periodic, e.g., $e^{i k x}$.
 
 }
 
-\only<3->{
+\only<2->{
 
 
 \begin{tcolorbox}[title=Off-diagonal Term in Our System]
@@ -1112,7 +1108,7 @@ which leads to
 The system can be (approximately) solved using Jacobi-Anger expansion
 
 \begin{equation*}
-e^{i z \cos (\Phi)} = \sum_{n=-\infty}^\infty i^n J_n(z) e^{i n\Phi}.
+e^{i z \cos ( k x)} = \sum_{n=-\infty}^\infty i^n J_n(z) e^{i n k x}.
 \end{equation*}
 
 
@@ -1220,18 +1216,22 @@ where
 
 \begin{tcolorbox}[title=Why Does RWA Work?]
 
-Hamiltonian off-diagonal element amplitude
-
 \begin{equation*}
-    \hat B_n \propto n J_n(n \sech \alpha) \sim \sqrt{n} \frac{ e^{ - n(\alpha -\tanh\alpha )} }{ \sqrt{ 2\pi  \tanh \alpha } }, \quad \text{for large } n
+    J_n(n \sech \alpha) \sim \frac{ e^{ - n(\alpha -\tanh\alpha )} }{ \sqrt{ 2\pi n \tanh \alpha } }, \quad \text{for large } n
 \end{equation*}
 
-where $\sech\alpha = \hat A\cos 2\theta_m$.
+% Hamiltonian off-diagonal element amplitude
+
+% \begin{equation*}
+%     \hat B_n \propto n J_n(n \sech \alpha) \sim \sqrt{n} \frac{ e^{ - n(\alpha -\tanh\alpha )} }{ \sqrt{ 2\pi  \tanh \alpha } }, \quad \text{for large } n
+% \end{equation*}
+
+% where $\sech\alpha = \hat A\cos 2\theta_m$.
 
 $\Rightarrow$
 
 \begin{equation*}
-    \Gamma \propto \hat B_n \propto \frac{ e^{ - n ( \alpha - \tanh \alpha )} }{\sqrt{2\pi n_0 \tanh \alpha} } 
+    \Gamma \propto \hat B_n \propto  \frac{ e^{ - n ( \alpha - \tanh \alpha )} }{\sqrt{2\pi n \tanh \alpha} } 
 \end{equation*}
 
 Small perturbation $\Rightarrow$ Small $\hat A$ $\Rightarrow$ Large $\alpha$ $\Rightarrow$ Drops fast at large $n$.
@@ -1244,39 +1244,39 @@ Small perturbation $\Rightarrow$ Small $\hat A$ $\Rightarrow$ Large $\alpha$ $\R
 
 
 
+% \begin{frame}{Single Frequency Matter Profile}
+
+
+% \begin{tcolorbox}[title=PLACEHOLDER]
+% \color{red}
+% NEED A GRAPH TO EXPLAIN WHY FOR A SPECIFIC n WE ONLY TAKE THE ONE THAT IS MOST CLOSE TO RESONANCE!!!
+
+% \end{tcolorbox}
+
+
+
+% \end{frame}
+
+
+
+
 \begin{frame}{Single Frequency Matter Profile}
 
 
-\begin{tcolorbox}[title=PLACEHOLDER]
-\color{red}
-NEED A GRAPH TO EXPLAIN WHY FOR A SPECIFIC n WE ONLY TAKE THE ONE THAT IS MOST CLOSE TO RESONANCE!!!
-
-\end{tcolorbox}
 
 
+% \only<1-1>{
 
-\end{frame}
+% \begin{figure}
+% \centering
+% \includegraphics[width=0.9\textwidth]{assets/stimulated-single-frequency-width-nk-orders.png}
+% \caption*{Width of the resonances for $A=0.1$, $\theta_m = \pi/5$. Each width is a parameter of $n \hat k$.}
+% \end{figure}
 
-
-
-
-\begin{frame}{Single Frequency Matter Profile}
-
-
-
-
-\only<1-1>{
-
-\begin{figure}
-\centering
-\includegraphics[width=0.9\textwidth]{assets/stimulated-single-frequency-width-nk-orders.png}
-\caption*{Width of the resonances for $A=0.1$, $\theta_m = \pi/5$. Each width is a parameter of $n \hat k$.}
-\end{figure}
-
-}
+% }
 
 
-\only<2-2>{
+%\only<2-2>{
 
 \begin{figure}
 \centering
@@ -1284,11 +1284,13 @@ NEED A GRAPH TO EXPLAIN WHY FOR A SPECIFIC n WE ONLY TAKE THE ONE THAT IS MOST C
 \caption*{Transition probability amplitude as a function of $1/\hat k$  (the phase is $(n - 1/\hat k)$). The colors represent different orders of $n_0$.}
 \end{figure}
 
-}
+%}
 
 
 \end{frame}
 
+
+\subsection{Two-frequency Matter Profile}
 
 
 \begin{frame}{Two-frequency Matter Profile}
@@ -1325,7 +1327,7 @@ where
 }
 
 
-\only<3->{
+\only<2->{
 \begin{tcolorbox}
 \centering
 \color{red}Which terms are important?
@@ -1543,76 +1545,6 @@ Two frequency periodic matter profile can be calculated using some lowest orders
 
 
 
-\end{frame}
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%% Tikz Marks Equations %%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-% For every picture that defines or uses external nodes, you'll have to
-% apply the 'remember picture' style. To avoid some typing, we'll apply
-% the style to all pictures.
-\tikzstyle{every picture}+=[remember picture]
-
-% By default all math in TikZ nodes are set in inline mode. Change this to
-% displaystyle so that we don't get small fractions.
-\everymath{\displaystyle}
-
-
-
-
-\begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
-\tikzstyle{na} = [baseline=-.5ex]
-
-\begin{itemize}[<+-| alert@+>]
-    \item this term blablabla
-        \tikz[na] \node[coordinate] (n1) {};
-\end{itemize}
-
-% Below we mix an ordinary equation with TikZ nodes. Note that we have to
-% adjust the baseline of the nodes to get proper alignment with the rest of
-% the equation.
-\begin{equation*}
-X = A+B +
-        \tikz[baseline]{
-            \node[fill=blue!20,anchor=base] (t1)
-            {$ C $};
-        } +
-        \tikz[baseline]{
-            \node[fill=red!20, ellipse,anchor=base] (t2)
-            {$D $};
-        } +
-        \tikz[baseline]{
-            \node[fill=green!20,anchor=base] (t3)
-            {$ E $};
-        }
-\end{equation*}
-
-\begin{itemize}[<+-| alert@+>]
-    \item Transversal acceleration
-        \tikz[na]\node [coordinate] (n2) {};
-    \item Centripetal acceleration
-        \tikz[na]\node [coordinate] (n3) {};
-\end{itemize}
-
-% Now it's time to draw some edges between the global nodes. Note that we
-% have to apply the 'overlay' style.
-\begin{tikzpicture}[overlay]
-        \path[->]<1-> (n1) edge [bend left] (t1);
-        \path[->]<2-> (n2) edge [bend right] (t2);
-        \path[->]<3-> (n3) edge [out=0, in=-90] (t3);
-\end{tikzpicture}
 \end{frame}
 
 
