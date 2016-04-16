@@ -5,6 +5,13 @@
 %\usetheme[titleformat=smallcaps]{metropolis}
 \usepackage{appendixnumberbeamer}
 
+
+\usepackage[T1]{fontenc}
+\usefonttheme[onlymath]{serif}
+\renewcommand\sfdefault{cmbr}
+
+
+
 %\usepackage{booktabs}
 %\usepackage[scale=2]{ccicons}
 \usepackage{tcolorbox}
@@ -45,7 +52,7 @@
 
 \newcommand{\bra}[1]{\left\langle #1\right|}
 \newcommand{\ket}[1]{\left| #1\right\rangle}
-\newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
 \newcommand{\avg}[1]{\left< #1 \right>}
 \newcommand{\ii}{\mathrm{i}}
 \DeclareMathOperator{\sech}{sech}
@@ -179,15 +186,15 @@ UNM}
  row sep=2ex, 
  use timeline header,
  timeline title={History of Neutrino (Partial)}]
-1930 & Pauli, letter to "Radioactive Ladies and Gentlemen"\endlr
-1933 & Fermi, the name "neutrino" \endlr
+1930 & Pauli, letter to ``Radioactive Ladies and Gentlemen"\endlr
+1933 & Fermi, the name ``neutrino" \endlr
 1956 & Reines \& Cowan, first neutrino evidence \endlr
-1957 & \textbf{Pontecorvo, theory of neutrino oscillations} \endlr
+1957 & Pontecorvo, theory of neutrino oscillations \endlr
 1968 & Homestake, first solar neutrino detection \endlr
 %1969 & Gribov \& Pontecorvo, solar neutrino oscillations \endlr
-1978 \& 1985 & \textbf{Wolfenstein \& Mikheyev \& Smirnov, MSW effect} \endlr
-1987 & Kamioka mine \& Morton salt mine, SN1987A neutrino\endlr
-1998 \& 2001 & Super-Kamiokande \& SNO, solar neutrino oscillations \endlr
+1978 \& 1985 & Wolfenstein--Mikheyev--Smirnov (MSW) effect \endlr
+1987 & SN1987A neutrinos $\sim$ 20 events\endlr
+1998 \& 2001 & Super--Kamiokande \& SNO, solar neutrino oscillations \endlr
 \end{vtimeline}
 
 
@@ -234,7 +241,7 @@ UNM}
     \item[] Neutrinos are
     \item Fermions,
     \item electrically neutral,
-    \item \textbf{light}.
+    \item light.
     \end{itemize}
 
 
@@ -288,8 +295,8 @@ UNM}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{assets/neutrino-oscillations-illustration.eps}
-    \caption*{Neutrino Oscillation}
+    \includegraphics[width=0.6\textwidth]{assets/neutrino-oscillations-illustration}
+    \caption*{Neutrino Oscillations}
 \end{figure}
 
 }
@@ -299,8 +306,8 @@ UNM}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\textwidth]{assets/vacuum-oscillations-3-flavor.png}
-    \caption*{Survival probability}
+    \includegraphics[width=0.9\textwidth]{assets/vacuum-oscillations-3-flavor}
+    \caption*{Probabilities of finding neutrinos to be in each flavors. Neutrino energy: 1MeV}
 \end{figure}
 
 }
@@ -679,8 +686,8 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
 where
 
 \begin{align*}
-    {\color{red}\omega_m(x) } =& \omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos 2\theta_v \right)^2 + \sin^2 2\theta_v  }  ,\\
-    {\color{blue}\tan 2\theta_m(x)} = & \sin 2\theta_v /\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right).
+    {\color{red}\omega_m(x) } = & ~\omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos 2\theta_v \right)^2 + \sin^2 2\theta_v  }  ,\\
+    {\color{blue}\tan 2\theta_m(x)} = & ~\frac{\sin 2\theta_v}{\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right)}.
 \end{align*}
 \end{tcolorbox}
 
@@ -1050,7 +1057,7 @@ where
 
 Hamiltonian in new basis
 \begin{equation*}
-    \mathbf{\tilde H} = - \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_m \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} 
+    \mathbf{\widetilde H} = - \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_m \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} 
 \end{equation*} 
 
 For matter profile
@@ -1111,6 +1118,9 @@ Rabi oscillation Hamiltonian
 
 
 \end{tcolorbox}
+
+
+
 
 
 
@@ -1315,11 +1325,11 @@ where
 
 \begin{itemize}\color{ao}
 \item 
-Mass squared differences + mixing angles -> Vacuum oscillation
+Mass squared differences + mixing angles $\to$ Vacuum oscillations
 \item 
 Matter oscillations depend on matter profile
 \item
-Single frequency periodic matter profile -> Resonances and their width
+Single frequency periodic matter profile $\to$ Resonances and their width
 
 \end{itemize}
 
