@@ -409,16 +409,17 @@ i\partial_{\mathrm x} \ket{\Psi} = \hat {\mathbf H} \ket{\Psi}
 
 
 \begin{frame}[fragile]{Why Do Neutrinos Oscillate?}
-
+\setbeamercovered{invisible}
 
 \begin{tcolorbox}[title=Flavor basis]
 
 
-Neutrino wave function in flavor basis $(\ket{\nu_{\mathrm e}}, \ket{\nu_{\mathrm x}})^T$ is related to state in energy eigenbasis $(\ket{\nu_1},\ket{\nu_2})^T$ through
+Neutrino wave function in flavor basis $\{\ket{\nu_{\mathrm e}}, \ket{\nu_{\mathrm \mu}} \}$ is related to state in energy basis $\{\ket{\nu_1},\ket{\nu_2} \}$ through
 
 \begin{equation*}
-\begin{pmatrix}\ket{\nu_{\mathrm e}} \\ \ket{\nu_{\mathrm x} } \end{pmatrix} = \begin{pmatrix}  \cos\theta  & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix}   \begin{pmatrix}\ket{\nu_1} \\ \ket{\nu_2}\end{pmatrix}
+\begin{pmatrix}\ket{\nu_{\mathrm e}} \\ \ket{\nu_{\mathrm \mu} } \end{pmatrix} = \begin{pmatrix}  \cos\theta_{\mathrm{v}}  & \sin\theta_{\mathrm{v}} \\ -\sin\theta_{\mathrm{v}}  & \cos\theta_{\mathrm{v}} \end{pmatrix}   \begin{pmatrix}\ket{\nu_1} \\ \ket{\nu_2}\end{pmatrix}
 \end{equation*}
+$\theta_{\mathrm{v}}$: mixing angle
 
 
 \end{tcolorbox}
@@ -434,7 +435,7 @@ Neutrino wave function in flavor basis $(\ket{\nu_{\mathrm e}}, \ket{\nu_{\mathr
 
 
 \begin{align*}
-&\frac{\omega_v}{2}\begin{pmatrix}
+&\frac{\omega_{\mathrm{v}}}{2}\begin{pmatrix}
 -1  & 0 \\
 0 & 1
 \end{pmatrix}\\
@@ -452,9 +453,9 @@ Neutrino wave function in flavor basis $(\ket{\nu_{\mathrm e}}, \ket{\nu_{\mathr
 \centering Flavor basis
 
 \begin{align*}
-&\frac{\omega_{\mathrm v} }{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix} \\
+&\frac{\omega_{\mathrm v} }{2}\begin{pmatrix} -\cos 2\theta_{\mathrm{v}} & \sin 2 \theta_{\mathrm{v}} \\ \sin 2\theta_{\mathrm{v}} & \cos 2\theta_{\mathrm{v}}  \end{pmatrix} \\
 =&
-\frac{\omega_{\mathrm v} }{2}\left( - \cos 2\theta_v\boldsymbol{ \sigma_3 } + \sin 2\theta_v \boldsymbol{\sigma_1} \right)
+\frac{\omega_{\mathrm v} }{2}\left( - \cos 2\theta_{\mathrm{v}}\boldsymbol{ \sigma_3 } + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma_1} \right)
 \end{align*}
 
 \end{column}%
@@ -478,7 +479,7 @@ Neutrino wave function in flavor basis $(\ket{\nu_{\mathrm e}}, \ket{\nu_{\mathr
 \begin{tcolorbox}[title=Transition Probability]
 
 \begin{equation*}
-P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mathrm x}})  =  \sin^2(2\theta_{\mathrm v}) \frac{ 1- \cos \left( \omega_{\mathrm v} x \right) }{2}
+P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin \left( \omega_{\mathrm v} x/2 \right) 
 \end{equation*}
 \alert{Mixing angle $\to$ Flavor oscillation amplitude\\
 $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
@@ -535,7 +536,7 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
 
 
 \begin{itemize}
-    \item[] Hamiltonian with Matter Interaction in Flavor Basis  ($\omega_v=\delta m^2/2E$):
+    \item[] Hamiltonian with Matter Interaction in Flavor Basis  ($\omega_{\mathrm{v}}=\delta m^2/2E$):
         \tikz[na] \node[coordinate] (n1) {};
 \end{itemize}
 
@@ -545,12 +546,12 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
     \mathbf{H} = 
     \tikz[baseline]{
             \node[fill=blue!20,anchor=base] (t1)
-            {$ \frac{\omega_v}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix} $}
+            {$ \frac{\omega_{\mathrm{v}}}{2}\begin{pmatrix} -\cos 2\theta_{\mathrm{v}} & \sin 2 \theta_{\mathrm{v}} \\ \sin 2\theta_{\mathrm{v}} & \cos 2\theta_{\mathrm{v}}  \end{pmatrix} $}
             } + 
             \tikz[baseline]{
             \node[fill=red!20, anchor=base] (t2)
             {$ 
-            \sqrt{2}G_F n_e(x) \begin{pmatrix}
+            \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x) \begin{pmatrix}
             1 & 0 \\
             0 & 0
             \end{pmatrix}
@@ -570,12 +571,12 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
     \mathbf{H} = 
     \tikz[baseline]{
             \node[fill=blue!20,anchor=base] (t1)
-            {$ \frac{\omega_v}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix} $}
+            {$ \frac{\omega_{\mathrm{v}}}{2}\begin{pmatrix} -\cos 2\theta_{\mathrm{v}} & \sin 2 \theta_{\mathrm{v}} \\ \sin 2\theta_{\mathrm{v}} & \cos 2\theta_{\mathrm{v}}  \end{pmatrix} $}
             } + 
             \tikz[baseline]{
             \node[fill=red!20, anchor=base] (t2)
             {$ 
-            \frac{\sqrt{2}G_F n_e(x)}{2} \begin{pmatrix}
+            \frac{\sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x)}{2} \begin{pmatrix}
             1 & 0 \\
             0 & -1
             \end{pmatrix}
@@ -590,12 +591,12 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
     \mathbf{H} = 
     \tikz[baseline]{
             \node[fill=blue!20,anchor=base] (t1)
-            {$ \frac{\omega_v}{2}\left( - \cos 2\theta_v \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1} \right) $}
+            {$ \frac{\omega_{\mathrm{v}}}{2}\left( - \cos 2\theta_{\mathrm{v}} \boldsymbol{\sigma_3} + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma_1} \right) $}
             } + 
             \tikz[baseline]{
             \node[fill=red!20, anchor=base] (t2)
             {$ 
-            \frac{\sqrt{2}G_F n_e(x)}{2} \boldsymbol{\sigma_3}
+            \frac{\sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x)}{2} \boldsymbol{\sigma_3}
             $};
         }
 \end{equation*}
@@ -607,7 +608,7 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
     \mathbf{H} = 
     \tikz[baseline]{
             \node[fill=blue!20,anchor=base] (t1)
-            {$ \frac{\omega_v}{2}\left( - \cos 2\theta_v \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1} \right) $}
+            {$ \frac{\omega_{\mathrm{v}}}{2}\left( - \cos 2\theta_{\mathrm{v}} \boldsymbol{\sigma_3} + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma_1} \right) $}
             } + 
             \tikz[baseline]{
             \node[fill=red!20, anchor=base] (t2)
@@ -625,7 +626,7 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
         \tikz[na]\node [coordinate] (n2) {};
     \item Matter interaction
         \tikz[na]\node [coordinate] (n3) {};
-    \item<4-> $\lambda(x) = \sqrt{2}G_F n_e(x)$ 
+    \item<4-> $\lambda(x) = \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x)$ 
 \end{itemize}
 
 
@@ -643,7 +644,7 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
 \begin{tcolorbox}[title=Hamiltonian with Matter Potential]
 
 \begin{equation*}
-    \mathbf{H} = \frac{\lambda(x) - \omega_v \cos 2\theta_v}{2} \boldsymbol{\sigma_3} + \frac{ \omega_v \sin 2\theta_v}{2} \boldsymbol{\sigma_1}
+    \mathbf{H} = \frac{\lambda(x) - \omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}}}{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2} \boldsymbol{\sigma_1}
 \end{equation*}
 
 \end{tcolorbox}
@@ -654,7 +655,7 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
 \begin{tcolorbox}[title=Hamiltonian in Vacuum]
 
 \begin{equation*}
-    \mathbf{H} = \frac{\omega_v \cos 2\theta_v }{2} \boldsymbol{\sigma_3} + \frac{ \omega_v \sin 2\theta_v}{2} \boldsymbol{\sigma_1}
+    \mathbf{H} = \frac{\omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}} }{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2} \boldsymbol{\sigma_1}
 \end{equation*}
 
 \end{tcolorbox}
@@ -680,18 +681,18 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
 \begin{tcolorbox}[title=Hamiltonian with Matter Potential]
 
 \begin{equation*}
-    \mathbf{H} = \frac{  {\color{red}\omega_m(x) }    {\color{blue}\cos 2\theta_m(x)}  }{2} \boldsymbol{\sigma_3} + \frac{ {\color{red}\omega_m(x) }   {\color{blue}\sin 2\theta_m(x) } }{2} \boldsymbol{\sigma_1},
+    \mathbf{H} = \frac{  {\color{red}\omega_{\mathrm{m}}(x) }    {\color{blue}\cos 2\theta_{\mathrm{m}}(x)}  }{2} \boldsymbol{\sigma_3} + \frac{ {\color{red}\omega_{\mathrm{m}}(x) }   {\color{blue}\sin 2\theta_{\mathrm{m}}(x) } }{2} \boldsymbol{\sigma_1},
 \end{equation*}
 
 where
 
 \begin{align*}
-    {\color{red}\omega_m(x) } = & ~\omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos 2\theta_v \right)^2 + \sin^2 2\theta_v  }  ,\\
-    {\color{blue}\tan 2\theta_m(x)} = & ~\frac{\sin 2\theta_v}{\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right)}.
+    {\color{red}\omega_{\mathrm{m}}(x) } = & ~\omega_{\mathrm{v}}\sqrt{ \left(\frac{\lambda}{\omega_{\mathrm{v}}} - \cos 2\theta_{\mathrm{v}} \right)^2 + \sin^2 2\theta_{\mathrm{v}}  }  ,\\
+    {\color{blue}\tan 2\theta_{\mathrm{m}}(x)} = & ~\frac{\sin 2\theta_{\mathrm{v}}}{\left(\cos 2\theta_{\mathrm{v}} - \frac{\lambda(x)}{\omega_{\mathrm{v}}} \right)}.
 \end{align*}
 \end{tcolorbox}
 
-\begin{tcolorbox}[title=Significance of $\theta_m$]
+\begin{tcolorbox}[title=Significance of $\theta_{\mathrm{m}}$]
 
 \begin{equation*}
 \begin{pmatrix}
@@ -727,14 +728,14 @@ where
 
 
 \begin{equation*}
-P(\ket{\nu_e}\to\ket{\nu_x})  = \frac{1}{2} {\color{blue}\sin^2(2\theta_m)} \left[ 1- \cos \left( {\color{red}\omega_m} x \right) \right]
+P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_x})  = \frac{1}{2} {\color{blue}\sin^2(2\theta_{\mathrm{m}})} \left[ 1- \cos \left( {\color{red}\omega_{\mathrm{m}}} x \right) \right]
 \end{equation*}
 
 \only<1-1>{
 where
 \begin{align*}
-    {\color{red}\omega_m(x) } =& \omega_v\sqrt{ \left(\frac{\lambda}{\omega_v} - \cos 2\theta_v \right)^2 + \sin^2 2\theta_v  }  ,\\
-    {\color{blue}\tan 2\theta_m(x)} = & \sin 2\theta_v /\left(\cos 2\theta_v - \frac{\lambda(x)}{\omega_v} \right)  .
+    {\color{red}\omega_{\mathrm{m}}(x) } =& \omega_{\mathrm{v}}\sqrt{ \left(\frac{\lambda}{\omega_{\mathrm{v}}} - \cos 2\theta_{\mathrm{v}} \right)^2 + \sin^2 2\theta_{\mathrm{v}}  }  ,\\
+    {\color{blue}\tan 2\theta_{\mathrm{m}}(x)} = & \sin 2\theta_{\mathrm{v}} /\left(\cos 2\theta_{\mathrm{v}} - \frac{\lambda(x)}{\omega_{\mathrm{v}}} \right)  .
 \end{align*}
 }
 
@@ -743,10 +744,10 @@ where
 
 % \only<2->{
 % \begin{itemize}
-%     \item Oscillation amplitude depends on $\theta_m$
+%     \item Oscillation amplitude depends on $\theta_{\mathrm{m}}$
 %     \item Oscillation angular frequency is
 % \begin{equation*}
-%     \omega_m \geq \omega_v \sin 2\theta_v
+%     \omega_{\mathrm{m}} \geq \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}
 % \end{equation*}
 
 % \end{itemize}
@@ -920,7 +921,7 @@ Matching of $l_{\mathrm m}$, and $l_{\mathrm k}$?
 Background matter basis: Hamiltonian is diagonalized with only background matter profile $\lambda_0$,
 
 \begin{equation*}
-    \mathbf H= -\frac{\omega_m}{2} \boldsymbol{\sigma_3}.
+    \mathbf H= -\frac{\omega_{\mathrm{m}}}{2} \boldsymbol{\sigma_3}.
 \end{equation*}
 
 \end{tcolorbox}
@@ -930,7 +931,7 @@ Background matter basis: Hamiltonian is diagonalized with only background matter
 \begin{tcolorbox}[title=Hamiltonian]
 
 \begin{equation*}
-    \mathbf H = \frac{1}{2}\left( - \omega_m + {\color{red}\delta \lambda(x)} \cos 2\theta_m \right) \boldsymbol{\sigma_3} - \frac{{\color{red}\delta \lambda(x) } }{2} \sin \theta_m \boldsymbol{\sigma_1}.
+    \mathbf H = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{{\color{red}\delta \lambda(x) } }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
 \end{equation*}
 
 
@@ -952,7 +953,7 @@ A. Balantekin, T. Ohlsson, A. Smirnov, E. Akhmedov, et al
 \begin{figure}
 \includegraphics[width=0.85\textwidth]{assets/stimulated-oscillation-phenomenon.png}
 %stimulated-neutrino-oscillations-kneller.png}
-\caption*{Stimulated oscillation. $\delta \lambda(x) = A \sin (\hat k \hat x)$  with $\hat A=0.1$, $\hat k=0.995$, $\theta_m=\pi/6$}
+\caption*{Stimulated oscillation. $\delta \lambda(x) = A \sin (\hat k \hat x)$  with $\hat A=0.1$, $\hat k=0.995$, $\theta_{\mathrm{m}}=\pi/6$}
 \end{figure}
 
 
@@ -997,7 +998,7 @@ A. Balantekin, T. Ohlsson, A. Smirnov, E. Akhmedov, et al
 
 \begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
     \begin{equation*}
-    \mathbf {H_0} = \frac{1}{2}\left( - \omega_m + {\color{red}\delta \lambda(x)} \cos 2\theta_m \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin \theta_m \boldsymbol{\sigma_1}.
+    \mathbf {H_0} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
 \end{equation*}
 \end{tcolorbox}
 
@@ -1025,7 +1026,7 @@ New basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} is
 where
 
 \begin{equation*}
-    \eta(x) - \eta(0) = - \frac{\omega_m}{2} x + \frac{\cos 2\theta_m}{2} \int_0^x \delta\lambda (\tau) d\tau.
+    \eta(x) - \eta(0) = - \frac{\omega_{\mathrm{m}}}{2} x + \frac{\cos 2\theta_{\mathrm{m}}}{2} \int_0^x \delta\lambda (\tau) d\tau.
 \end{equation*}
 
 \end{tcolorbox}
@@ -1057,7 +1058,7 @@ where
 
 Hamiltonian in new basis
 \begin{equation*}
-    \mathbf{\widetilde H} = - \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_m \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} 
+    \mathbf{\widetilde H} = - \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_{\mathrm{m}} \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} 
 \end{equation*} 
 
 For matter profile
@@ -1189,7 +1190,7 @@ The off-diagonal element of Hamiltonian
 \hat h= \sum_{n=-\infty}^{\infty} \frac{1}{2} \hat B_n e^{i  {\color{magenta} (n\hat k-1) } \hat x},
 \end{equation*}
 
-where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_m  J_n ( \hat A \cos 2\theta_m / \hat k ) $.
+where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \cos 2\theta_{\mathrm{m}} / \hat k ) $.
 
 
 ${\color{magenta} (n \hat k-1) }$ $\to$ perturbation frequency in matter profile for each component.
@@ -1251,7 +1252,7 @@ where
 % \begin{figure}
 % \centering
 % \includegraphics[width=0.9\textwidth]{assets/stimulated-single-frequency-width-nk-orders.png}
-% \caption*{Width of the resonances for $A=0.1$, $\theta_m = \pi/5$. Each width is a parameter of $n \hat k$.}
+% \caption*{Width of the resonances for $A=0.1$, $\theta_{\mathrm{m}} = \pi/5$. Each width is a parameter of $n \hat k$.}
 % \end{figure}
 
 % }
@@ -1276,7 +1277,7 @@ where
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{assets/stimulated-oscillation-rwa-and-numerical.png}
-    \caption*{RWA works. $\hat A=0.1$, $\hat k=0.995$, $\theta_m=\pi/6$}
+    \caption*{RWA works. $\hat A=0.1$, $\hat k=0.995$, $\theta_{\mathrm{m}}=\pi/6$}
 \end{figure}
 
 \end{frame}
@@ -1380,7 +1381,7 @@ Single frequency periodic matter profile $\to$ Resonances and their width
 %     \hat B_n \propto n J_n(n \sech \alpha) \sim \sqrt{n} \frac{ e^{ - n(\alpha -\tanh\alpha )} }{ \sqrt{ 2\pi  \tanh \alpha } }, \quad \text{for large } n
 % \end{equation*}
 
-% where $\sech\alpha = \hat A\cos 2\theta_m$.
+% where $\sech\alpha = \hat A\cos 2\theta_{\mathrm{m}}$.
 
 $\Rightarrow$
 
@@ -1428,7 +1429,7 @@ where
 
 \begin{align*}
 &\hat B_{n_1,n_2}( \hat k_1,\hat k_2)\\
-= & -(-i)^{n_1+n_2} ( n_1 \hat k_1 + n_2 \hat k_2 ) J_{n_1}\left( \frac{\hat A_1\cos 2\theta_m}{\hat k_1} \right) J_{n_2}\left( \frac{\hat A_2\cos 2\theta_m}{\hat k_2} \right) 
+= & -(-i)^{n_1+n_2} ( n_1 \hat k_1 + n_2 \hat k_2 ) J_{n_1}\left( \frac{\hat A_1\cos 2\theta_{\mathrm{m}}}{\hat k_1} \right) J_{n_2}\left( \frac{\hat A_2\cos 2\theta_{\mathrm{m}}}{\hat k_2} \right) 
 \end{align*}
 
 
