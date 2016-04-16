@@ -419,7 +419,7 @@ Neutrino wave function in flavor basis $\{\ket{\nu_{\mathrm e}}, \ket{\nu_{\math
 \begin{equation*}
 \begin{pmatrix}\ket{\nu_{\mathrm e}} \\ \ket{\nu_{\mathrm \mu} } \end{pmatrix} = \begin{pmatrix}  \cos\theta_{\mathrm{v}}  & \sin\theta_{\mathrm{v}} \\ -\sin\theta_{\mathrm{v}}  & \cos\theta_{\mathrm{v}} \end{pmatrix}   \begin{pmatrix}\ket{\nu_1} \\ \ket{\nu_2}\end{pmatrix}
 \end{equation*}
-$\theta_{\mathrm{v}}$: mixing angle
+$\theta_{\mathrm{v}}$: vacuum mixing angle
 
 
 \end{tcolorbox}
@@ -536,7 +536,7 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
 
 
 \begin{itemize}
-    \item[] Hamiltonian with Matter Interaction in Flavor Basis  ($\omega_{\mathrm{v}}=\delta m^2/2E$):
+    \item[] Hamiltonian with matter interaction in flavor basis  ($\omega_{\mathrm{v}}=\delta m^2/2E$):
         \tikz[na] \node[coordinate] (n1) {};
 \end{itemize}
 
@@ -640,7 +640,18 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
         \path[->]<1-> (n3) edge [bend right=20] (t2);
 \end{tikzpicture}
 
-\only<4>{
+
+
+
+\end{frame}
+
+\begin{frame}{Matter Interaction}
+
+
+
+
+
+
 \begin{tcolorbox}[title=Hamiltonian with Matter Potential]
 
 \begin{equation*}
@@ -648,9 +659,9 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
 \end{equation*}
 
 \end{tcolorbox}
-}
 
-\only<5->{
+
+
 
 \begin{tcolorbox}[title=Hamiltonian in Vacuum]
 
@@ -659,8 +670,6 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
 \end{equation*}
 
 \end{tcolorbox}
-}
-
 
 
 
@@ -687,8 +696,8 @@ $(m_2^2-m_1^2)/2E$ $\to$ Oscillation wavelength}
 where
 
 \begin{align*}
-    {\color{red}\omega_{\mathrm{m}}(x) } = & ~\omega_{\mathrm{v}}\sqrt{ \left(\frac{\lambda}{\omega_{\mathrm{v}}} - \cos 2\theta_{\mathrm{v}} \right)^2 + \sin^2 2\theta_{\mathrm{v}}  }  ,\\
-    {\color{blue}\tan 2\theta_{\mathrm{m}}(x)} = & ~\frac{\sin 2\theta_{\mathrm{v}}}{\left(\cos 2\theta_{\mathrm{v}} - \frac{\lambda(x)}{\omega_{\mathrm{v}}} \right)}.
+    {\color{red}\omega_{\mathrm{m}}(x) } = & ~\omega_{\mathrm{v}}\sqrt{ \left(\frac{\lambda(x)}{\omega_{\mathrm{v}}} - \cos 2\theta_{\mathrm{v}} \right)^2 + \sin^2 2\theta_{\mathrm{v}}  }  ,\\
+    {\color{blue}\tan 2\theta_{\mathrm{m}}(x)} = & ~\frac{\sin 2\theta_{\mathrm{v}}}{\cos 2\theta_{\mathrm{v}} - \lambda(x)/\omega_{\mathrm{v}} }.
 \end{align*}
 \end{tcolorbox}
 
@@ -734,8 +743,8 @@ P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_x})  = \frac{1}{2} {\color{blue}\sin^2(2\the
 \only<1-1>{
 where
 \begin{align*}
-    {\color{red}\omega_{\mathrm{m}}(x) } =& \omega_{\mathrm{v}}\sqrt{ \left(\frac{\lambda}{\omega_{\mathrm{v}}} - \cos 2\theta_{\mathrm{v}} \right)^2 + \sin^2 2\theta_{\mathrm{v}}  }  ,\\
-    {\color{blue}\tan 2\theta_{\mathrm{m}}(x)} = & \sin 2\theta_{\mathrm{v}} /\left(\cos 2\theta_{\mathrm{v}} - \frac{\lambda(x)}{\omega_{\mathrm{v}}} \right)  .
+    {\color{red}\omega_{\mathrm{m}}(x) } & =  \omega_{\mathrm{v}}\sqrt{ \left(\frac{\lambda(x)}{\omega_{\mathrm{v}}} - \cos 2\theta_{\mathrm{v}} \right)^2 + \sin^2 2\theta_{\mathrm{v}}  }  ,\\
+    {\color{blue}\tan 2\theta_{\mathrm{m}}(x)} & =  \frac{\sin 2\theta_{\mathrm{v}} }{ \cos 2\theta_{\mathrm{v}} - \lambda(x)/\omega_{\mathrm{v}}  } .
 \end{align*}
 }
 
@@ -801,7 +810,7 @@ where
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth]{assets/msw_and_density.png}
-\caption*{Yellow bar is the resonance point. Smirnov, 2003.}
+\caption*{Yellow bar is the resonance point. Red: $\ket{\nu_e}$. Green: $\ket{\nu_\mu}$. Smirnov, 2003.}
 \end{figure}
 
 
@@ -843,7 +852,7 @@ where
     
     \item Constant matter profile $\lambda_0$:
     \begin{equation*}
-        l_{\mathrm v}, \quad l_{\mathrm m} \sim \frac{1}{\lambda_0} 
+        l_{\mathrm v}, \quad l_{\mathrm m} \sim \frac{1}{\omega_{\mathrm m}} 
     \end{equation*}
     
     \item Varying matter profile $\lambda(x) = \lambda_0 + A \sin (k x)$,
@@ -855,23 +864,23 @@ where
 
 \end{tcolorbox}
 
-\only<2-2>{
-\begin{textblock*}{64mm}(64mm,0.01\textheight)
+% \only<2-2>{
+% \begin{textblock*}{64mm}(64mm,0.01\textheight)
 
-\tiny
-$$\omega_{\mathrm m} = \omega_{\mathrm v}\sqrt{ \left(\frac{\lambda}{\omega_{\mathrm v}} - \cos 2\theta_{\mathrm v} \right)^2 + \sin^2 2\theta_{\mathrm v}  }$$
-\normalsize
+% \tiny
+% $$\omega_{\mathrm m} = \omega_{\mathrm v}\sqrt{ \left(\frac{\lambda}{\omega_{\mathrm v}} - \cos 2\theta_{\mathrm v} \right)^2 + \sin^2 2\theta_{\mathrm v}  }$$
+% \normalsize
 
-\end{textblock*}
-}
+% \end{textblock*}
+% }
 
 
-\only<1-1>{
+\only<1>{
 \begin{tcolorbox}[title=MSW Resonance]
 
 
 \begin{equation*}
-    l_{\mathrm v} \sim l_{\mathrm m} \cos 2\theta_{\mathrm v}
+    l_{\mathrm v} \sim l_{\mathrm m} \sin 2\theta_{\mathrm v}
 \end{equation*}
 
 \end{tcolorbox}
@@ -880,8 +889,8 @@ $$\omega_{\mathrm m} = \omega_{\mathrm v}\sqrt{ \left(\frac{\lambda}{\omega_{\ma
 \only<2-2>{
 
 \begin{tcolorbox}
-
-Matching of $l_{\mathrm m}$, and $l_{\mathrm k}$?
+\centering
+$l_{\mathrm m}$, and $l_{\mathrm k}$?
 
 \end{tcolorbox}
 
@@ -921,7 +930,7 @@ Matching of $l_{\mathrm m}$, and $l_{\mathrm k}$?
 Background matter basis: Hamiltonian is diagonalized with only background matter profile $\lambda_0$,
 
 \begin{equation*}
-    \mathbf H= -\frac{\omega_{\mathrm{m}}}{2} \boldsymbol{\sigma_3}.
+    -\frac{\omega_{\mathrm{m}}}{2} \boldsymbol{\sigma_3}.
 \end{equation*}
 
 \end{tcolorbox}
@@ -946,14 +955,14 @@ Background matter basis: Hamiltonian is diagonalized with only background matter
 % \end{tcolorbox}
 
 \begin{tcolorbox}
-A. Balantekin, T. Ohlsson, A. Smirnov, E. Akhmedov, et al
+A. Balantekin, T. Ohlsson, A. Smirnov, E. Akhmedov, J. Kneller, et al
 \end{tcolorbox}
 
 
 \begin{figure}
 \includegraphics[width=0.85\textwidth]{assets/stimulated-oscillation-phenomenon.png}
 %stimulated-neutrino-oscillations-kneller.png}
-\caption*{Stimulated oscillation. $\delta \lambda(x) = A \sin (\hat k \hat x)$  with $\hat A=0.1$, $\hat k=0.995$, $\theta_{\mathrm{m}}=\pi/6$}
+\caption*{Stimulated oscillations. $\delta \lambda(x) = A \sin (\hat k \hat x)$  with $\hat A=0.1$, $\hat k=0.995$, $\theta_{\mathrm{m}}=\pi/6$}
 \end{figure}
 
 
@@ -998,7 +1007,7 @@ A. Balantekin, T. Ohlsson, A. Smirnov, E. Akhmedov, et al
 
 \begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
     \begin{equation*}
-    \mathbf {H_0} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
+    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
 \end{equation*}
 \end{tcolorbox}
 
@@ -1063,7 +1072,7 @@ Hamiltonian in new basis
 
 For matter profile
 \begin{equation*}
-    \lambda(x) = \lambda_0 + A \sin (k x),
+    \lambda(x) = \lambda_0 + {\color{red}A \sin (k x)},
 \end{equation*}
 
 
@@ -1075,13 +1084,13 @@ For matter profile
 
 \begin{equation*}
     \frac{i}{4}\begin{pmatrix}
-    0 & e^{i(k x + 2{\color{violet}\eta})} - e^{i(-k x + 2{\color{violet}\eta})} \\
-    e^{i(k x - 2{\color{violet}\eta})} - e^{i(-k x - 2{\color{violet}\eta})} & 0
+    0 & e^{i(k x + 2\eta)} - e^{i(-k x + 2\eta)} \\
+    e^{i(k x - 2\eta)} - e^{i(-k x - 2\eta)} & 0
     \end{pmatrix}
 \end{equation*}
 
 \begin{equation*}
-    {\color{violet}\eta(x)} = - \frac{\omega_{\mathrm m} }{2}x - \frac{\cos 2\theta_{\mathrm m} }{2} \frac{A}{k} \cos (k x ).
+    \eta(x) = - \frac{\omega_{\mathrm m} }{2}x - \frac{\cos 2\theta_{\mathrm m} }{2} \frac{A}{k} \cos (k x ).
 \end{equation*}
 
 \end{tcolorbox}
@@ -1090,9 +1099,11 @@ For matter profile
 \only<2>{
 \begin{tcolorbox}[title=Hamiltonian in New Basis]
 
-\begin{equation*}
-    h = \frac{i}{4}\left( e^{i(k + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) } - e^{i(-k  + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) } \right)
-\end{equation*}
+\begin{align*}
+    h &\equiv -\frac{ {\color{red}\delta \lambda(x)}  }{2} e^{2i\eta(x)} \\
+    & = \frac{i}{4}\left[ \exp\left(i(k + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) \right) \right. \\
+    &\phantom{=} \left. - \exp\left(i(-k  + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) \right) \right]
+\end{align*}
 
 
 \end{tcolorbox}
@@ -1142,9 +1153,10 @@ Rabi oscillation Hamiltonian
 
 \begin{tcolorbox}[title=Off-diagonal Term in Our System]
 
-\begin{equation*}
-h\propto e^{i(k + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) } - e^{i(-k  + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) },
-\end{equation*}
+\begin{align*}
+    h & \propto \left[ \exp\left(i(k + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) \right) \right. \\
+    &\phantom{\propto} \left. - \exp\left(i(-k  + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) \right) \right]
+\end{align*}
 
 \end{tcolorbox}
 
@@ -1154,7 +1166,13 @@ h\propto e^{i(k + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \
 The system can be (approximately) solved using Jacobi-Anger expansion
 
 \begin{equation*}
-e^{i \beta \cos ( k x)} = \sum_{n=-\infty}^\infty i^n J_n(\beta) e^{i n k x}.
+e^{i \beta \cos ( k x)} = \sum_{n=-\infty}^\infty i^n J_n(\beta) e^{i n k x},
+\end{equation*}
+
+where
+
+\begin{equation*}
+    J_n(\beta) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \, \Gamma(m+n+1)} {\left(\frac{\beta}{2}\right)}^{2m+n} 
 \end{equation*}
 
 
@@ -1175,6 +1193,7 @@ Characteristic scale: $\omega_{\mathrm{m}}$
 \item $\hat A = A/\omega_{\mathrm{m}}$
     \item $\hat k = k/\omega_{\mathrm{m}}$
     \item $\hat x = \omega_{\mathrm{m}} x$
+    \item $\hat h= h/\omega_{\mathrm{m}}$
 \end{itemize}
 \end{tcolorbox}
 }
@@ -1187,23 +1206,23 @@ Characteristic scale: $\omega_{\mathrm{m}}$
 The off-diagonal element of Hamiltonian
 
 \begin{equation*}
-\hat h= \sum_{n=-\infty}^{\infty} \frac{1}{2} \hat B_n e^{i  {\color{magenta} (n\hat k-1) } \hat x},
+\hat h= \sum_{n=-\infty}^{\infty} \frac{1}{2} \hat B_n e^{i  {\color{red} (n\hat k-1) } \hat x},
 \end{equation*}
 
 where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \cos 2\theta_{\mathrm{m}} / \hat k ) $.
 
 
-${\color{magenta} (n \hat k-1) }$ $\to$ perturbation frequency in matter profile for each component.
+${\color{red} (n \hat k-1) }$ $\to$ perturbation frequency in matter profile for each component.
 
 \end{tcolorbox}
 
 
 \begin{tcolorbox}[title=Which $n$ to Choose]
 \centering
-small ${\color{magenta} (n\hat k-1)}$ $\to$ important term
+small ${\color{red} (n\hat k-1)}$ $\to$ important term
 
 \centering
-Find integer $n_0 = \mathrm{Round}\left[ 1/\hat k \right]$ that minimizes ${\color{magenta} n\hat k -1}$.
+Find integer $n_0 = \mathrm{Round}\left[ 1/\hat k \right]$ that minimizes ${\color{red} n\hat k -1}$.
 
 \end{tcolorbox}
 
@@ -1231,7 +1250,7 @@ where
 
 \begin{align*}
     q^2 &= \left\lvert  \Gamma/2 \right\rvert^2 + ( n_0 \hat k - 1 )^2,\qquad \text{frequency of oscillations} \\
-    \Gamma &= \left\lvert \hat B_{n_0} \right\rvert, \qquad \text{width of resonance ($nk$ as parameter)} \\
+    \Gamma &= \left\lvert \hat B_{n_0} \right\rvert, \qquad \text{width of resonance ($n\hat k$ as parameter)} \\
     n_0 &= \mathrm{Round}\left[ 1/\hat k \right]
 \end{align*}
 
