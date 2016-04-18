@@ -188,13 +188,13 @@ UNM}
  timeline title={History of Neutrino (Partial)}]
 1930 & Pauli, letter to ``Radioactive Ladies and Gentlemen"\endlr
 1933 & Fermi, the name ``neutrino" \endlr
-1956 & Reines \& Cowan, first neutrino evidence \endlr
+1956 & Reines \& Cowan, reactor neutrinos \endlr
 %1957 & Pontecorvo, theory of neutrino oscillations \endlr
-1968 & Homestake, first solar neutrino detection \endlr
+1968 & Homestake, solar neutrinos \endlr
 %1969 & Gribov \& Pontecorvo, solar neutrino oscillations \endlr
-1978 \& 1985 & Wolfenstein--Mikheyev--Smirnov (MSW) effect \endlr
+1978 \& 1985 & Mikheyev--Smirnov--Wolfenstein (MSW) effect \endlr
 1987 & SN1987A neutrinos $\sim$ 20 events\endlr
-1998 \& 2001 & Super--Kamiokande \& SNO, solar neutrino oscillations \endlr
+1998 \& 2001 & Super--Kamiokande \& SNO, neutrino oscillations \endlr
 \end{vtimeline}
 
 
@@ -249,7 +249,7 @@ UNM}
 \only<1-1>{
 \begin{figure}
 \includegraphics[width=\textwidth]{assets/neutrino-normal-hierarchy.png}
-\caption*{Adapted from Olga Mena \& Stephen Parke, 2004}
+\caption*{Adapted from Olga Mena \& Stephen Parke (2004)}
 \end{figure}
 }
 
@@ -319,31 +319,7 @@ UNM}
 \end{frame}
 
 
-\subsection{Solar Neutrino Problem}
 
-\begin{frame}{Solar Neutrino Problem}
-
-% \begin{tcolorbox}[title=Solar Neutrinos]
-% {\color{gray}pp chain}, $\mathrm{{}^7Be}$, $\mathrm{{}^8B}$, pep, CNO
-% \end{tcolorbox}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/chlorine-detector-solar-neutrinos.jpg} %https://ase.tufts.edu/cosmos/print_images.asp?id=37
-    %https://ase.tufts.edu/cosmos/view_picture.asp?id=585
-    \caption*{Chlorine detector (Homestake experiment) results and theory predictions. SNU: 1 event for $10^{36}$ target atoms per second. Kenneth R. Lang (2010)}
-\end{figure}
-
-
-% \begin{figure}
-% \centering
-% \includegraphics[width=0.8\textwidth]{assets/colortheoryvsexp.png}
-% \caption*{Less electron flavor neutrinos observed in experiments than the Standard Solar Model prediction. Bahcall \& Serendelli, 2005}
-% \end{figure}
-
-
-    
-\end{frame}
 
 
 
@@ -376,7 +352,7 @@ i\partial_x \ket{\Psi} = \hat {\mathbf H} \ket{\Psi}
 
 
 \begin{itemize}
-\item Basis: Hamiltonian diagonalized basis/mass basis/propagation basis, $\ket{\nu_1}$ and $\ket{\nu_2}$.
+\item Basis: Hamiltonian diagonalized basis/mass basis/propagation basis, $\{ \ket{\nu_1}, \ket{\nu_2}\}$.
 
 \item
 \begin{equation*}
@@ -482,8 +458,12 @@ $\theta_{\mathrm{v}}$: vacuum mixing angle
 \begin{equation*}
 P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin^2 \left( \omega_{\mathrm v} x/2 \right) 
 \end{equation*}
-\alert{Mixing angle determines flavor oscillation amplitude\\
-$\omega_m=(m_2^2-m_1^2)/2E$ determines oscillation wavelength}
+\begin{itemize}
+    \item $\omega_{\mathrm v}=(m_2^2-m_1^2)/2E$ determines oscillation wavelength
+    \item Mixing angle determines flavor oscillation amplitude
+\end{itemize}
+
+
 
 
 \end{tcolorbox}
@@ -522,7 +502,7 @@ $\omega_m=(m_2^2-m_1^2)/2E$ determines oscillation wavelength}
 \begin{minipage}[b]{0.5\linewidth}
 \centering
 \includegraphics[height=0.42\textheight]{assets/neutral-current.png}
-\caption*{Neutral current interaction between $\nu_{\mathrm e}$, $\nu_{\mu}$, $\nu_{\tau}$, and $e^{-}$, quarks, and antiquarks.}
+\caption*{Neutral current interaction between $\nu_{\mathrm e}$, $\nu_{\mu}$, $\nu_{\tau}$, and $e^{-}$, quarks.}
 \end{minipage}
 \end{figure}
 
@@ -691,7 +671,7 @@ $\omega_m=(m_2^2-m_1^2)/2E$ determines oscillation wavelength}
 \begin{tcolorbox}[title=Hamiltonian in Vacuum]
 
 \begin{equation*}
-    \mathbf{H} = \frac{\omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}} }{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2} \boldsymbol{\sigma_1}
+    \frac{\omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}} }{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2} \boldsymbol{\sigma_1}
 \end{equation*}
 
 \end{tcolorbox}
@@ -798,7 +778,33 @@ where
 
 %%%%%%% MSW Effect %%%%%%%%%
 
-\begin{frame}{MSW Effect}
+\subsection{Solar Neutrino Problem}
+
+\begin{frame}{Solar Neutrino Problem}
+
+% \begin{tcolorbox}[title=Solar Neutrinos]
+% {\color{gray}pp chain}, $\mathrm{{}^7Be}$, $\mathrm{{}^8B}$, pep, CNO
+% \end{tcolorbox}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/chlorine-detector-solar-neutrinos.jpg} %https://ase.tufts.edu/cosmos/print_images.asp?id=37
+    %https://ase.tufts.edu/cosmos/view_picture.asp?id=585
+    \caption*{Chlorine detector (Homestake experiment) results and theory predictions. SNU: 1 event for $10^{36}$ target atoms per second. Kenneth R. Lang (2010)}
+\end{figure}
+
+
+% \begin{figure}
+% \centering
+% \includegraphics[width=0.8\textwidth]{assets/colortheoryvsexp.png}
+% \caption*{Less electron flavor neutrinos observed in experiments than the Standard Solar Model prediction. Bahcall \& Serendelli, 2005}
+% \end{figure}
+
+
+    
+\end{frame}
+
+\begin{frame}{MSW Effect and Solar Neutrinos}
 
 \setbeamercovered{invisible}
 
@@ -840,6 +846,9 @@ where
 
 
 \end{frame}
+
+
+
 
 
 
@@ -949,7 +958,7 @@ $\big\downarrow$
 
 \only<2-2>{
 
-\begin{tcolorbox}
+\begin{tcolorbox}[title=Other Resonance?]
 \centering
 $l_{\mathrm m}$, and $l_{k}$?
 
@@ -1063,7 +1072,7 @@ J. Kneller, et al (2013); K. Patton, et al (2014); $\cdots$
 \section{Understanding Stimulated Oscillations}
 
 
-\begin{frame}{Understanding Stimulated Oscillations}
+\begin{frame}{Supernova Matter Density Profile}
 
 \begin{tcolorbox}[title=Why Do We Care]
 
@@ -1081,6 +1090,31 @@ Astrophysical environments: supernovae, accretion disks etc
 
 
 \end{frame}
+
+
+
+\begin{frame}{Supernova Matter Density Profile}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/supernova-matter-density-profile-power-spectra.png}
+    \caption*{Supernova matter density power spectra from three simulations. E. Borriello, et al (2014)}
+\end{figure}
+
+
+\begin{align*}
+P &= 4 \lvert c_n \rvert^2 \\
+\Delta \rho(r) &= \sum_n c_n e^{i k_n r}    
+\end{align*}
+    
+
+
+
+
+\end{frame}
+
+
 
 
 \subsection{Hamiltonian, and Basis}
@@ -1161,25 +1195,30 @@ For matter profile
 
 
 
-\only<1>{
+% \only<1>{
 
-\begin{tcolorbox}[title=Hamiltonian in New Basis]
+% \begin{tcolorbox}[title=Hamiltonian in New Basis]
 
-\begin{equation*}
-    \frac{i}{4}\begin{pmatrix}
-    0 & e^{i(k x + 2\eta)} - e^{i(-k x + 2\eta)} \\
-    e^{i(k x - 2\eta)} - e^{i(-k x - 2\eta)} & 0
-    \end{pmatrix}
-\end{equation*}
+% \begin{equation*}
+%     \frac{i}{4}\begin{pmatrix}
+%     0 & e^{i(k x + 2\eta)} - e^{i(-k x + 2\eta)} \\
+%     e^{i(k x - 2\eta)} - e^{i(-k x - 2\eta)} & 0
+%     \end{pmatrix}
+% \end{equation*}
 
-\begin{equation*}
-    \eta(x) = - \frac{\omega_{\mathrm m} }{2}x - \frac{\cos 2\theta_{\mathrm m} }{2} \frac{A}{k} \cos (k x ).
-\end{equation*}
+% \begin{equation*}
+%     \eta(x) = - \frac{\omega_{\mathrm m} }{2}x - \frac{\cos 2\theta_{\mathrm m} }{2} \frac{A}{k} \cos (k x ).
+% \end{equation*}
 
-\end{tcolorbox}
-}
+% \begin{equation*}
+%     \phantom{\frac{1}{2}}\\
+%     \phantom{1}
+% \end{equation*}
 
-\only<2>{
+% \end{tcolorbox}
+% }
+
+%\only<2>{
 \begin{tcolorbox}[title=Hamiltonian in New Basis]
 
 \begin{align*}
@@ -1190,7 +1229,7 @@ For matter profile
 
 
 \end{tcolorbox}
-}
+%}
 
 
 
@@ -1233,16 +1272,17 @@ Hamiltonian
 \only<1>{
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\textwidth]{assets/rabi-resonance.png}
-    \caption*{Resonance}
+    \includegraphics[width=0.9\textwidth]{assets/rabi-oscillations.png}
+    \caption*{}
 \end{figure}
+
 }
 
 \only<2->{
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\textwidth]{assets/rabi-oscillations.png}
-    \caption*{}
+    \includegraphics[width=0.9\textwidth]{assets/rabi-resonance.png}
+    \caption*{Resonance}
 \end{figure}
 }
 
@@ -1272,7 +1312,7 @@ Hamiltonian
 
 
 
-The system can be (approximately) solved using Jacobi-Anger expansion
+Jacobi-Anger expansion
 
 \begin{equation*}
 e^{i \beta \cos ( k x)} = \sum_{n=-\infty}^\infty i^n J_n(\beta) e^{i n k x},
@@ -1317,12 +1357,12 @@ The off-diagonal element of Hamiltonian
 where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \cos 2\theta_{\mathrm{m}} / \hat k ) $.
 
 
-${\color{blue} (n \hat k-1) }$ $\to$ perturbation frequency in matter profile for each component.
+%${\color{blue} (n \hat k-1) }$ $\to$ perturbation frequency in matter profile for each component.
 
 \end{tcolorbox}
 
 
-\begin{tcolorbox}[title=Which $n$ to Choose]
+\begin{tcolorbox}[title=Near Resonance]
 \centering
 small ${\color{blue} (n\hat k-1)}$ $\to$ important term
 
@@ -1437,26 +1477,6 @@ where
 \end{frame}
 
 
-\begin{frame}{Supernova Matter Density Profile}
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/supernova-matter-density-profile-power-spectra.png}
-    \caption*{Supernova matter density power spectra from three simulations. E. Borriello, et al (2014)}
-\end{figure}
-
-
-\begin{align*}
-P &= 4 \lvert c_n \rvert^2 \\
-\Delta \rho(r) &= \sum_n c_n e^{i k_n r}    
-\end{align*}
-    
-
-
-
-
-\end{frame}
 
 
 
