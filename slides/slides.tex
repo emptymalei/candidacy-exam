@@ -248,14 +248,14 @@ UNM}
 
 \only<1-1>{
 \begin{figure}
-\includegraphics[width=\textwidth]{assets/neutrino-normal-hierarchy.png}
+\includegraphics[width=\textwidth]{assets/neutrino-mass-normal-hierarchy-simple.png}
 \caption*{Adapted from Olga Mena \& Stephen Parke (2004)}
 \end{figure}
 }
 
 \only<2-2>{
 \begin{figure}
-\includegraphics[width=\textwidth]{assets/neutrino-inverted-hierarchy.png}
+\includegraphics[width=\textwidth]{assets/neutrino-mass-inverted-hierarchy-simple.png}
 \caption*{Adapted from Olga Mena \& Stephen Parke (2004)}
 \end{figure}
 }
@@ -1202,9 +1202,9 @@ P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (20
 
 \begin{tcolorbox}[title=A Better Basis]
 
-{\color{red}
+
 Remove diagonal elements
-}
+
 
 Define new basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} is related to background matter basis \{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\} through
 
@@ -1321,8 +1321,8 @@ Hamiltonian
 
 \begin{equation*}
     \begin{pmatrix}
-    -\omega/2 & \alpha \omega e^{i k x}\\
-    \alpha \omega  e^{-i k x} & \omega/2
+    -\omega_0/2 & \alpha \omega_0 e^{i \omega x}\\
+    \alpha \omega_0  e^{-i k x} & \omega_0/2
     \end{pmatrix},
 \end{equation*}
 \end{tcolorbox}
@@ -1376,6 +1376,13 @@ Hamiltonian
 
 \begin{tcolorbox}[title=Off-diagonal Term in Our System]
 
+\begin{equation*}
+    \mathbf{\widetilde H}= \begin{pmatrix}
+    0 & h \\
+    h^* & 0
+    \end{pmatrix}
+\end{equation*}
+
 \begin{align*}
     h & \propto \left[ \exp\left(i(k + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) \right) \right. \\
     &\phantom{\propto} \left. - \exp\left(i(-k  + \omega_{\mathrm m})x + i\cos 2\theta_{\mathrm m} \frac{A}{k} \cos (k x ) \right) \right]
@@ -1424,9 +1431,17 @@ Characteristic scale: $\omega_{\mathrm{m}}$
 
 The off-diagonal element of Hamiltonian
 
+% \begin{equation*}
+% \hat h= \sum_{n=-\infty}^{\infty} \frac{1}{2} \hat B_n e^{i  {\color{blue} (n\hat k-1) } \hat x},
+% \end{equation*}
+
 \begin{equation*}
-\hat h= \sum_{n=-\infty}^{\infty} \frac{1}{2} \hat B_n e^{i  {\color{blue} (n\hat k-1) } \hat x},
+\mathbf{\widetilde H}= \sum_{n=-\infty}^{\infty} \begin{pmatrix}
+0 & \frac{1}{2} \hat B_n e^{i  {\color{blue} (n\hat k-1) } \hat x}\\
+\frac{1}{2} \hat B_n^* e^{ -i  {\color{blue} (n\hat k-1) } \hat x} & 0
+\end{pmatrix}
 \end{equation*}
+
 
 where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \cos 2\theta_{\mathrm{m}} / \hat k ) $.
 
@@ -1436,14 +1451,14 @@ where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \c
 \end{tcolorbox}
 
 
-\begin{tcolorbox}[title=Near Resonance]
-\centering
-small ${\color{blue} (n\hat k-1)}$ $\to$ important term
+% \begin{tcolorbox}[title=Near Resonance]
+% \centering
+% small ${\color{blue} (n\hat k-1)}$ $\to$ important term
 
-\centering
-Find integer $n_0 = \mathrm{Round}\left[ 1/\hat k \right]$ that minimizes ${\color{blue} n\hat k -1}$.
+% \centering
+% Find integer $n_0 = \mathrm{Round}\left[ 1/\hat k \right]$ that minimizes ${\color{blue} n\hat k -1}$.
 
-\end{tcolorbox}
+% \end{tcolorbox}
 
 }
 
@@ -1460,15 +1475,14 @@ Find integer $n_0 = \mathrm{Round}\left[ 1/\hat k \right]$ that minimizes ${\col
 \begin{tcolorbox}[title=Transition Probability]
 
 \begin{equation*}
-    P_{1\to 2} = \frac{ \lvert \Gamma/2 \rvert^2 }{ q ^2  } \sin^2 \left( \frac{q}{2} x \right)  ,
+    P_{1\to 2}^{(n)} = \frac{ \lvert \Gamma^{(n)}/2 \rvert^2 }{ \left\lvert  \Gamma^{(n)}/2 \right\rvert^2 + ( n \hat k - 1 )^2  } \sin^2 \left( \frac{ q^{(n)} }{2} x \right)  ,
 \end{equation*}
 
 where
 
 \begin{align*}
-    q^2 &= \left\lvert  \Gamma/2 \right\rvert^2 + ( n_0 \hat k - 1 )^2,\quad \text{frequency of oscillations} \\
-    \Gamma &= \left\lvert \hat B_{n_0} \right\rvert, \quad \text{width of resonance ($n\hat k$ as parameter)} \\
-    n_0 &= \mathrm{Round}\left[ 1/\hat k \right]
+    q^{(n)} &= \sqrt{\left\lvert  \Gamma^{(n)}/2 \right\rvert^2 + ( n \hat k - 1 )^2},\quad \text{frequency of oscillations} \\
+    \Gamma^{(n)} &= \left\lvert \hat B_{n} \right\rvert, \quad \text{width of resonance ($n\hat k$ as parameter)}
 \end{align*}
 
 
