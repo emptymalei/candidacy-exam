@@ -239,7 +239,7 @@ UNM}
 
     \begin{itemize}
     \item[] Neutrinos are
-    \item Fermions,
+    \item fermions,
     \item electrically neutral,
     \item light.
     \end{itemize}
@@ -459,8 +459,8 @@ $\theta_{\mathrm{v}}$: vacuum mixing angle
 P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin^2 \left( \omega_{\mathrm v} x/2 \right) 
 \end{equation*}
 \begin{itemize}
-    \item $\omega_{\mathrm v}=(m_2^2-m_1^2)/2E$ determines oscillation wavelength
-    \item Mixing angle determines flavor oscillation amplitude
+    \item $\omega_{\mathrm v}=(m_2^2-m_1^2)/2E$ determines oscillation wavelength.
+    \item Mixing angle $\theta_{\mathrm v}$ determines flavor oscillation amplitude.
 \end{itemize}
 
 
@@ -502,7 +502,7 @@ P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin
 \begin{minipage}[b]{0.5\linewidth}
 \centering
 \includegraphics[height=0.42\textheight]{assets/neutral-current.png}
-\caption*{Neutral current interaction between $\nu_{\mathrm e}$, $\nu_{\mu}$, $\nu_{\tau}$, and $e^{-}$, quarks.}
+\caption*{Neutral current interaction between $\nu_{\mathrm e}$, $\nu_{\mu}$, $\nu_{\tau}$, and $e^{-}$, quarks and antiquarks.}
 \end{minipage}
 \end{figure}
 
@@ -552,11 +552,11 @@ P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin
     \tikz[baseline]{
             \node[fill=blue!20,anchor=base] (t1)
             {$ \frac{\omega_{\mathrm{v}}}{2}\begin{pmatrix} -\cos 2\theta_{\mathrm{v}} & \sin 2 \theta_{\mathrm{v}} \\ \sin 2\theta_{\mathrm{v}} & \cos 2\theta_{\mathrm{v}}  \end{pmatrix} $}
-            } + 
+            } 
             \tikz[baseline]{
             \node[fill=red!20, anchor=base] (t2)
             {$ 
-            \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x) \begin{pmatrix}
+            \pm \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x) \begin{pmatrix}
             1 & 0 \\
             0 & 0
             \end{pmatrix}
@@ -614,11 +614,11 @@ P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin
     \tikz[baseline]{
             \node[fill=blue!20,anchor=base] (t1)
             {$ \frac{\omega_{\mathrm{v}}}{2}\left( - \cos 2\theta_{\mathrm{v}} \boldsymbol{\sigma_3} + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma_1} \right) $}
-            } + 
+            } 
             \tikz[baseline]{
             \node[fill=red!20, anchor=base] (t2)
             {$ 
-            \frac{\lambda(x)}{2} \boldsymbol{\sigma_3}
+            +\frac{\lambda(x)}{2} \boldsymbol{\sigma_3}
             $};
         }
 \end{equation*}
@@ -650,34 +650,20 @@ P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin
 
 \end{frame}
 
-\begin{frame}{Matter Interaction}
+% \begin{frame}{Matter Interaction}
+
+
+% \begin{tcolorbox}[title=Hamiltonian with Matter Potential]
+
+% \begin{equation*}
+%     \mathbf{H} = 
+% \end{equation*}
+
+% \end{tcolorbox}
 
 
 
-
-
-
-\begin{tcolorbox}[title=Hamiltonian with Matter Potential]
-
-\begin{equation*}
-    \mathbf{H} = \frac{\lambda(x) - \omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}}}{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2} \boldsymbol{\sigma_1}
-\end{equation*}
-
-\end{tcolorbox}
-
-
-
-
-\begin{tcolorbox}[title=Hamiltonian in Vacuum]
-
-\begin{equation*}
-    \frac{\omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}} }{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2} \boldsymbol{\sigma_1}
-\end{equation*}
-
-\end{tcolorbox}
-
-
-\end{frame}
+% \end{frame}
 
 
 
@@ -690,22 +676,47 @@ P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin
 
 
 
-
-\begin{tcolorbox}[title=Hamiltonian with Matter Potential]
+\begin{tcolorbox}[title=Hamiltonian in Vacuum]
 
 \begin{equation*}
-    \mathbf{H} = \frac{  {\color{red}\omega_{\mathrm{m}}(x) }    {\color{blue}\cos 2\theta_{\mathrm{m}}(x)}  }{2} \boldsymbol{\sigma_3} + \frac{ {\color{red}\omega_{\mathrm{m}}(x) }   {\color{blue}\sin 2\theta_{\mathrm{m}}(x) } }{2} \boldsymbol{\sigma_1},
+    \mathbf{H}_{\mathrm{vacuum}}=\frac{\omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}} }{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2} \boldsymbol{\sigma_1}
 \end{equation*}
+
+\end{tcolorbox}
+
+
+
+
+% \begin{align*}
+%     \mathbf{H} &= \left({\color{red}\frac{\lambda(x)  }{2} } {\color{blue}- \frac{\omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}}  }{2} } \right) \boldsymbol{\sigma_3} {\color{blue} + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2} } \boldsymbol{\sigma_1}  \\
+%     & =\frac{  {\color{red}\omega_{\mathrm{m}}(x) }    {\color{blue}\cos 2\theta_{\mathrm{m}}(x)}  }{2} \boldsymbol{\sigma_3} + \frac{ {\color{red}\omega_{\mathrm{m}}(x) }   {\color{blue}\sin 2\theta_{\mathrm{m}}(x) } }{2} \boldsymbol{\sigma_1},
+% \end{align*}
+
+\begin{align*}
+    \mathbf{H} &= \frac{\lambda(x) - \omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}}  }{2}  \boldsymbol{\sigma_3}  + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2}  \boldsymbol{\sigma_1}  \\
+    & =\frac{ \omega_{\mathrm{m}}(x)   \cos 2\theta_{\mathrm{m}}(x)  }{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{m}}(x)    \sin 2\theta_{\mathrm{m}}(x)  }{2} \boldsymbol{\sigma_1},
+\end{align*}
+
 
 where
 
 \begin{align*}
-    {\color{red}\omega_{\mathrm{m}}(x) } = & ~\omega_{\mathrm{v}}\sqrt{ \left(\frac{\lambda(x)}{\omega_{\mathrm{v}}} - \cos 2\theta_{\mathrm{v}} \right)^2 + \sin^2 2\theta_{\mathrm{v}}  }  ,\\
-    {\color{blue}\tan 2\theta_{\mathrm{m}}(x)} = & ~\frac{\sin 2\theta_{\mathrm{v}}}{\cos 2\theta_{\mathrm{v}} - \lambda(x)/\omega_{\mathrm{v}} }.
+    \omega_{\mathrm{m}}(x)  = & ~\sqrt{ \left(\lambda(x) - \omega_{\mathrm{v}}\cos 2\theta_{\mathrm{v}} \right)^2 + \omega_{\mathrm{v}}^2 \sin^2 2\theta_{\mathrm{v}}  } ,\\
+    \tan 2\theta_{\mathrm{m}}(x)  = & ~\frac{\omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}  }{ \omega_{\mathrm{v}}\cos 2\theta_{\mathrm{v}} - \lambda(x)  }.
 \end{align*}
-\end{tcolorbox}
+
+
+
+
+\end{frame}
+
+
+\begin{frame}{MSW Effect}
+
 
 \begin{tcolorbox}[title=Significance of $\theta_{\mathrm{m}}$]
+
+Define matter basis $\{\ket{\nu_{\mathrm{L}}}, \ket{\nu_{\mathrm{H}}}\}$
 
 \begin{equation*}
 \begin{pmatrix}
@@ -724,6 +735,15 @@ where
 \end{tcolorbox}
 
 
+In matter basis
+
+\begin{equation*}
+    \mathbf{H}_{\text{matter-basis}} = -\frac{\omega_{\mathrm m}}{2}\boldsymbol{\sigma_3}
+\end{equation*}
+
+
+
+
 
 
 \end{frame}
@@ -734,10 +754,10 @@ where
 
 
 
+\begin{frame}{MSW Effect}
 
-\begin{frame}{Constant Matter Density}
+For constant matter profile $\lambda_0$
 
-\begin{tcolorbox}[title=Transition Probability for Constant Matter Density]
 
 
 \begin{equation*}
@@ -747,12 +767,12 @@ P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_\mu})  =  {\color{blue}\sin^2(2\theta_{\math
 \only<1-1>{
 where
 \begin{align*}
-    {\color{red}\omega_{\mathrm{m}}(x) } & =  \omega_{\mathrm{v}}\sqrt{ \left(\frac{\lambda(x)}{\omega_{\mathrm{v}}} - \cos 2\theta_{\mathrm{v}} \right)^2 + \sin^2 2\theta_{\mathrm{v}}  }  ,\\
-    {\color{blue}\tan 2\theta_{\mathrm{m}}(x)} & =  \frac{\sin 2\theta_{\mathrm{v}} }{ \cos 2\theta_{\mathrm{v}} - \lambda(x)/\omega_{\mathrm{v}}  } .
+    {\color{red}\omega_{\mathrm{m}}(x) } = & ~\sqrt{ \left(\lambda - \omega_{\mathrm{v}}\cos 2\theta_{\mathrm{v}} \right)^2 + \omega_{\mathrm{v}}^2 \sin^2 2\theta_{\mathrm{v}}  } ,\\
+    {\color{blue}\tan 2\theta_{\mathrm{m}}} = & ~\frac{\omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}  }{ \cos 2\theta_{\mathrm{v}}\omega_{\mathrm{v}} - \lambda  } .
 \end{align*}
 }
 
-\end{tcolorbox}
+
 
 
 % \only<2->{
@@ -771,7 +791,54 @@ where
 
 
 
+\begin{frame}{MSW Resonance}
 
+
+\begin{tcolorbox}[title=Hamiltonian with Matter Potential]
+
+\begin{align*}
+    \mathbf{H} &= \frac{\lambda(x) -\omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}} }{2} \boldsymbol{\sigma_3}  + \frac{ \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}}{2}  \boldsymbol{\sigma_1} \\
+    &=\frac{ \omega_{\mathrm{m}}(x)    \cos 2\theta_{\mathrm{m}}(x)  }{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{m}}(x)    \sin 2\theta_{\mathrm{m}}(x)  }{2} \boldsymbol{\sigma_1}
+\end{align*}
+
+\begin{equation*}
+\tan 2\theta_{\mathrm{m}}(x) =  \frac{\omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}  }{ \omega_{\mathrm{v}}\cos 2\theta_{\mathrm{v}} - \lambda(x)  }.
+\end{equation*}
+
+
+\begin{equation*}
+\begin{pmatrix}
+\ket{\nu_{\mathrm{e}}} \\
+\ket{\nu_{\mu}}
+\end{pmatrix} =
+\begin{pmatrix}
+\cos\theta_{\mathrm m} & \sin\theta_{\mathrm m} \\
+-\sin\theta_{\mathrm m} & \cos\theta_{\mathrm m}
+\end{pmatrix}\begin{pmatrix}
+\ket{\nu_{\mathrm{L}}} \\
+\ket{\nu_{\mathrm{H}}}
+\end{pmatrix}
+\end{equation*}
+
+
+\end{tcolorbox}
+
+
+
+
+
+\begin{tcolorbox}[title=Transition Probability]
+\begin{equation*}
+P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_\mu})  =  \sin^2(2\theta_{\mathrm{m}}) \sin^2 \left( \omega_{\mathrm{m}} x \right)
+\end{equation*}
+
+\end{tcolorbox}
+
+
+
+
+
+\end{frame}
 
 
 
@@ -858,11 +925,11 @@ where
 Suppose $\omega_{\mathrm v} = (m_2^2 - m_1^2)/2E <0$,
 
 \begin{equation*}
-    \mathbf{H}' = \colorbox{blue!20}{$
+    \mathbf{H} = \colorbox{blue!20}{$
     -\frac{\omega_{\mathrm{v}}}{2}\begin{pmatrix} -\cos 2\theta_{\mathrm{v}} & \sin 2 \theta_{\mathrm{v}} \\ \sin 2\theta_{\mathrm{v}} & \cos 2\theta_{\mathrm{v}}  \end{pmatrix} 
-    $}+
+    $}
              \colorbox{red!20}{$
-            \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x) \begin{pmatrix}
+            + \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x) \begin{pmatrix}
             1 & 0 \\
             0 & 0
             \end{pmatrix}
@@ -873,7 +940,7 @@ Suppose $\omega_{\mathrm v} = (m_2^2 - m_1^2)/2E <0$,
 $\big\downarrow$
 
 \begin{equation*}
-    \mathbf{H}' =
+    \mathbf{H} =
     \left( 
     %\colorbox{blue!20}{$ 
      \frac{-\omega_{\mathrm{v}}}{2} \cos 2\theta_{\mathrm{v}}  
@@ -911,65 +978,90 @@ $\big\downarrow$
 
 \subsection{Stimulated Neutrino Oscillations}
 
-\begin{frame}{Length Scales}
+% \begin{frame}{Length Scales}
 
-\begin{tcolorbox}[title=Characteristic Scales]
-\begin{itemize}
-    \item Vacuum problem: only one length scale
-    \begin{equation*}
-        l_{\mathrm v} \sim \frac{1}{\omega_{\mathrm v}}
-    \end{equation*}
+% \begin{tcolorbox}[title=Characteristic Scales]
+% \begin{itemize}
+%     \item Vacuum problem:
+%     \begin{equation*}
+%         l_{\mathrm v} \sim \frac{1}{\omega_{\mathrm v}}
+%     \end{equation*}
     
-    \item Constant matter profile $\lambda_0$:
-    \begin{equation*}
-        l_{\mathrm v}, \quad l_{\mathrm m} \sim \frac{1}{\omega_{\mathrm m}} 
-    \end{equation*}
+%     \item Constant matter profile $\lambda_0$:
+%     \begin{equation*}
+%         l_{\mathrm v}, \quad l_{\mathrm m} \sim \frac{1}{\omega_{\mathrm m}} 
+%     \end{equation*}
     
-    \item Varying matter profile $\lambda(x) = \lambda_0 + A \sin (k x)$,
+%     \item Varying matter profile $\lambda(x) = \lambda_0 + A \sin (k x)$,
     
-    \begin{equation*}
-        l_{\mathrm v}, \quad l_{\mathrm m}, \quad l_{k} \sim \frac{1}{k}
-    \end{equation*}
-\end{itemize}
+%     \begin{equation*}
+%         l_{\mathrm v}, \quad l_{\mathrm m}, \quad l_{k} \sim \frac{1}{k}
+%     \end{equation*}
+% \end{itemize}
 
-\end{tcolorbox}
+% \end{tcolorbox}
+
+% % \only<2-2>{
+% % \begin{textblock*}{64mm}(64mm,0.01\textheight)
+
+% % \tiny
+% % $$\omega_{\mathrm m} = \omega_{\mathrm v}\sqrt{ \left(\frac{\lambda}{\omega_{\mathrm v}} - \cos 2\theta_{\mathrm v} \right)^2 + \sin^2 2\theta_{\mathrm v}  }$$
+% % \normalsize
+
+% % \end{textblock*}
+% % }
+
+
+% \only<1>{
+% \begin{tcolorbox}[title=MSW Resonance]
+
+
+% \begin{equation*}
+%     l_{\mathrm v} \sim l_{\mathrm m} \sin 2\theta_{\mathrm v}
+% \end{equation*}
+
+% \end{tcolorbox}
+% }
 
 % \only<2-2>{
-% \begin{textblock*}{64mm}(64mm,0.01\textheight)
 
-% \tiny
-% $$\omega_{\mathrm m} = \omega_{\mathrm v}\sqrt{ \left(\frac{\lambda}{\omega_{\mathrm v}} - \cos 2\theta_{\mathrm v} \right)^2 + \sin^2 2\theta_{\mathrm v}  }$$
-% \normalsize
+% \begin{tcolorbox}[title=Other Resonance?]
+% \centering
+% $l_{\mathrm m}$, and $l_{k}$?
 
-% \end{textblock*}
+% \end{tcolorbox}
+
 % }
 
 
-\only<1>{
-\begin{tcolorbox}[title=MSW Resonance]
+
+% \end{frame}
 
 
+
+\begin{frame}{Supernova Matter Density Profile}
+
+\begin{tcolorbox}[title=Why Do We Care]
+
+Astrophysical environments: supernovae, accretion disks etc
+
+\end{tcolorbox}
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.5\textheight]{assets/supernova-shock-turbulence.png}
+    \caption*{Supernova shock and turbulence. E. Borriello, et al  (2014)}
+    %https://inspirehep.net/record/1262293?ln=en
+    % arXiv: 1310.7488
+\end{figure}
+
+\vspace{-1em}
 \begin{equation*}
-    l_{\mathrm v} \sim l_{\mathrm m} \sin 2\theta_{\mathrm v}
+\Delta n_e (r) = \sum_n c_n \sin( k_n r + \phi_n )
 \end{equation*}
-
-\end{tcolorbox}
-}
-
-\only<2-2>{
-
-\begin{tcolorbox}[title=Other Resonance?]
-\centering
-$l_{\mathrm m}$, and $l_{k}$?
-
-\end{tcolorbox}
-
-}
-
-
+    
 
 \end{frame}
-
 
 
 
@@ -1000,7 +1092,7 @@ $l_{\mathrm m}$, and $l_{k}$?
 Background matter basis: Hamiltonian is diagonalized with only background matter profile $\lambda_0$,
 
 \begin{equation*}
-    -\frac{\omega_{\mathrm{m}}}{2} \boldsymbol{\sigma_3}.
+    \mathrm{H}_{\mathrm{background}} = -\frac{\omega_{\mathrm{m}}}{2} \boldsymbol{\sigma_3}.
 \end{equation*}
 
 \end{tcolorbox}
@@ -1025,15 +1117,14 @@ Background matter basis: Hamiltonian is diagonalized with only background matter
 % \end{tcolorbox}
 
 \begin{tcolorbox}
-P. Krastev (1989); F. Loreti (1994); A. Balantekin, et al (1996); E. Akhmedov (2000); \\
-J. Kneller, et al (2013); K. Patton, et al (2014); $\cdots$
+P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (2014);
 \end{tcolorbox}
 
 
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{assets/stimulated-oscillation-phenomenon.png}
 %stimulated-neutrino-oscillations-kneller.png}
-\caption*{Stimulated oscillations. $\delta \lambda(x) = A \sin (\hat k \hat x)$  with $\hat A=0.1$, $\hat k=0.995$, $\theta_{\mathrm{m}}=\pi/6$}
+\caption*{Stimulated oscillations. $\lambda(x) = \lambda_0 +  A \sin (k x)$  with $\hat x = \omega_{\mathrm m} x $, $A=0.1\omega_{\mathrm m}$, $k=0.995\omega_{\mathrm m}$, $\theta_{\mathrm{m}}=\pi/6$}
 \end{figure}
 
 
@@ -1072,47 +1163,27 @@ J. Kneller, et al (2013); K. Patton, et al (2014); $\cdots$
 \section{Understanding Stimulated Oscillations}
 
 
-\begin{frame}{Supernova Matter Density Profile}
 
-\begin{tcolorbox}[title=Why Do We Care]
-
-Astrophysical environments: supernovae, accretion disks etc
-
-\end{tcolorbox}
-
-\begin{figure}
-    \centering
-    \includegraphics[height=0.6\textheight]{assets/supernova-shock-turbulence.png}
-    \caption*{Supernova shock and turbulence. E. Borriello, et al  (2014)}
-    %https://inspirehep.net/record/1262293?ln=en
-    % arXiv: 1310.7488
-\end{figure}
+% \begin{frame}{Supernova Matter Density Profile}
 
 
-\end{frame}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{assets/supernova-matter-density-profile-power-spectra.png}
+%     \caption*{Supernova matter density power spectra from two simulations. E. Borriello, et al (2014)}
+% \end{figure}
 
 
-
-\begin{frame}{Supernova Matter Density Profile}
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/supernova-matter-density-profile-power-spectra.png}
-    \caption*{Supernova matter density power spectra from three simulations. E. Borriello, et al (2014)}
-\end{figure}
-
-
-\begin{align*}
-P &= 4 \lvert c_n \rvert^2 \\
-\Delta \rho(r) &= \sum_n c_n e^{i k_n r}    
-\end{align*}
+% \begin{align*}
+% P &= 4 \lvert c_n \rvert^2 \\
+% \Delta \rho(r) &= \sum_n c_n e^{i k_n r}    
+% \end{align*}
     
 
 
 
 
-\end{frame}
+% \end{frame}
 
 
 
@@ -1135,7 +1206,7 @@ P &= 4 \lvert c_n \rvert^2 \\
 Remove diagonal elements
 }
 
-New basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} is related to background matter basis \{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\} through
+Define new basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} is related to background matter basis \{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\} through
 
 \begin{equation*}
     \begin{pmatrix}
@@ -1152,7 +1223,7 @@ New basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} is
 where
 
 \begin{equation*}
-    \eta(x) - \eta(0) = - \frac{\omega_{\mathrm{m}}}{2} x + \frac{\cos 2\theta_{\mathrm{m}}}{2} \int_0^x \delta\lambda (\tau) d\tau.
+    \eta(x) - \eta(0) = - \frac{\omega_{\mathrm{m}}}{2} x + \frac{\cos 2\theta_{\mathrm{m}}}{2} \int_0^x {\color{red}\delta\lambda (\tau)} d\tau.
 \end{equation*}
 
 \end{tcolorbox}
@@ -1184,7 +1255,10 @@ where
 
 Hamiltonian in new basis
 \begin{equation*}
-    \mathbf{\widetilde H} = - \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_{\mathrm{m}} \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} 
+    \mathbf{\widetilde H} = - \frac{ {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_{\mathrm{m}} \begin{pmatrix} 0 & e^{2i\eta(x)} \\ e^{-2 i\eta(x) } & 0 \end{pmatrix} = \begin{pmatrix}
+    0 & h \\
+    h^* & 0
+    \end{pmatrix}
 \end{equation*} 
 
 For matter profile
@@ -1318,7 +1392,7 @@ Jacobi-Anger expansion
 e^{i \beta \cos ( k x)} = \sum_{n=-\infty}^\infty i^n J_n(\beta) e^{i n k x},
 \end{equation*}
 
-where $J_n(\beta)$ is Bessel's function of the first kind.
+where $J_n(\beta)$ are Bessel's functions of the first kind.
 
 
 \end{frame}
@@ -1425,7 +1499,7 @@ where
 \begin{figure}
 \centering
 \includegraphics[width=0.95\textwidth]{assets/stimulated-single-frequency-resonances-k-orders.png}
-\caption*{Transition probability amplitude as a function of $1/\hat k$  (the phase is $(n - 1/\hat k)$). The colors represent different orders of $n_0$.}
+\caption*{Resonances of different $n = 1/\hat k$.}
 \end{figure}
 
 %}
@@ -1439,7 +1513,7 @@ where
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{assets/stimulated-oscillation-rwa-and-numerical.png}
-    \caption*{RWA works. $\hat A=0.1$, $\hat k=0.995$, $\theta_{\mathrm{m}}=\pi/6$}
+    \caption*{$\hat A=0.1$, $\hat k=0.995$, $\theta_{\mathrm{m}}=\pi/6$}
 \end{figure}
 
 \end{frame}
@@ -1470,7 +1544,7 @@ where
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{assets/2-freq-numerical-and-first-5-rwa.png}
-    \caption*{Comparison of approximation and numerical solution for two-frequency matter profile}
+    \caption*{$\lambda(x) = \lambda_0 + A_1\sin(k_1 x) + A_2\sin(k_2 x)$. $\hat k_1=0.3$, $\hat k_2=0.3$, $A_1=A_2=0.1$, $\theta_m=\pi/5$.}
 \end{figure}
 
 
@@ -1497,20 +1571,22 @@ where
 
 \begin{itemize}\color{ao}
 \item 
-Mass squared differences + mixing angles $\to$ Vacuum oscillations
+The fact that neutrino flavor sates are not mass states causes vacuum oscillations.
 \item 
-Matter oscillations depend on matter profile
+MSW resonance happens when matter potential cancels out the vacuum diagonal elements of the Hamiltonian.
 \item
-Simple periodic matter profile $\delta\lambda(x)\sim \sin(k x)$ $\to$ resonance and width
+Even matter profile doesn't match MSW requirement, variation in matter profile can cause resonances.
+\item
+Single frequency perturbations in matter profile is a combination of many Rabi oscillations.
 \end{itemize}
 
 
 
 \begin{itemize}\color{red}
  \item 
- Multi-frequency matter profile
+ How to understand and calculate systems with multi-frequency matter profile (turbulence).
  \item
- Combine matter effect with neutrino self-interactions
+ Combine periodic or even turbulent matter profile with neutrino self-interaction.
 \end{itemize}
 
 
@@ -1522,9 +1598,9 @@ Simple periodic matter profile $\delta\lambda(x)\sim \sin(k x)$ $\to$ resonance 
 
 \begin{frame}{Acknowledgement}
 
-I am very thankful to Dr. Sajad Abbar, Prof. Huaiyu Duan (my advisor), and Dr. Shashank Shalgar, for all the help in both research and life.
+I am very thankful to my advisor Professor Huaiyu Duan, and everyone in our group Dr. Sajad Abbar, and Dr. Shashank Shalgar, for all the help in both research and life.
 
-Supported by DOE EPSCoR grant \#desc0008142 at UNM.
+Supported by DOE EPSCoR grant \#DE-SC0008142 at UNM.
 
 \end{frame}
 
@@ -1546,12 +1622,28 @@ BACKUP SLIDES
 
 \end{frame}
 
+
+\begin{frame}{Parameters Used for Vacuum Oscillations}
+
+$\theta_{12} = 33.36/180\pi$;
+$\theta_{13} = 8.66/180\pi$;
+$\theta_{23} = 40/180*\pi$;
+$\delta_{cp} = 0$;
+$m_1^2 = 0.01$;
+$m_2^2 = m_1^2 + 0.000079$;
+$E=1$MeV
+
+
+\end{frame}
+
+
+
 \begin{frame}{Single Frequency Matter Profile}
 
 
 \only<1-1>{
 
-\begin{tcolorbox}[title=Why Does RWA Work?]
+\begin{tcolorbox}[title=Why Does It Work?]
 
 \begin{equation*}
     J_n(n \sech \alpha) \sim \frac{ e^{ - n(\alpha -\tanh\alpha )} }{ \sqrt{ 2\pi n \tanh \alpha } }, \quad \text{for large } n
