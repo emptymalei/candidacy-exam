@@ -887,15 +887,15 @@ P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_\mu})  =  \sin^2(2\theta_{\mathrm{m}}) \sin^
 
 \begin{equation*}
 \begin{pmatrix}
-\ket{\nu_{\mathrm{e}}} \\
-\ket{\nu_{\mu}}
-\end{pmatrix} =
-\begin{pmatrix}
-\cos\theta_{\mathrm m} & \sin\theta_{\mathrm m} \\
--\sin\theta_{\mathrm m} & \cos\theta_{\mathrm m}
-\end{pmatrix}\begin{pmatrix}
 \ket{\nu_{\mathrm{L}}} \\
 \ket{\nu_{\mathrm{H}}}
+\end{pmatrix} =
+\begin{pmatrix}
+\cos\theta_{\mathrm m} & -\sin\theta_{\mathrm m} \\
+\sin\theta_{\mathrm m} & \cos\theta_{\mathrm m}
+\end{pmatrix}\begin{pmatrix}
+\ket{\nu_{\mathrm{e}}} \\
+\ket{\nu_{\mu}}
 \end{pmatrix}
 \end{equation*}
 
@@ -1203,6 +1203,13 @@ P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (20
 
 \begin{frame}{Understanding Stimulated Oscillations}
 
+
+Matter profile
+\begin{equation*}
+    \lambda(x) = \lambda_0 + {\color{red}A \sin (k x)},
+\end{equation*}
+
+
 \begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
     \begin{equation*}
     \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
@@ -1211,9 +1218,6 @@ P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (20
 
 
 \begin{tcolorbox}[title=A Better Basis]
-
-
-Remove diagonal elements
 
 
 Define new basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} is related to background matter basis \{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\} through
@@ -1270,11 +1274,6 @@ Hamiltonian in new basis
     h^* & 0
     \end{pmatrix}
 \end{equation*} 
-
-For matter profile
-\begin{equation*}
-    \lambda(x) = \lambda_0 + {\color{red}A \sin (k x)},
-\end{equation*}
 
 
 
@@ -1485,7 +1484,7 @@ where $\hat B_n =  - (-i)^n  n \hat k \tan 2\theta_{\mathrm{m}}  J_n ( \hat A \c
 \begin{tcolorbox}[title=Transition Probability]
 
 \begin{equation*}
-    P_{1\to 2}^{(n)} = \frac{ \lvert \Gamma^{(n)}/2 \rvert^2 }{ \left\lvert  \Gamma^{(n)}/2 \right\rvert^2 + ( n \hat k - 1 )^2  } \sin^2 \left( \frac{ q^{(n)} }{2} x \right)  ,
+    P_{\mathrm{L\to H}}^{(n)} = \frac{ \left\lvert \left\lvert \hat B_{n} \right\rvert/2 \right\rvert^2 }{ \left\lvert  \left\lvert \hat B_{n} \right\rvert/2 \right\rvert^2 + ( n \hat k - 1 )^2  } \sin^2 \left( \frac{ q^{(n)} }{2} x \right)  ,
 \end{equation*}
 
 where
@@ -1568,7 +1567,7 @@ where
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{assets/2-freq-numerical-and-first-5-rwa.png}
-    \caption*{$\lambda(x) = \lambda_0 + A_1\sin(k_1 x) + A_2\sin(k_2 x)$. $\hat k_1=0.3$, $\hat k_2=0.3$, $A_1=A_2=0.1$, $\theta_m=\pi/5$.}
+    \caption*{$\lambda(x) = \lambda_0 + A_1\sin(k_1 x) + A_2\sin(k_2 x)$. $\hat k_1=0.3$, $\hat k_2=0.7$, $A_1=A_2=0.1$, $\theta_m=\pi/5$.}
 \end{figure}
 
 
