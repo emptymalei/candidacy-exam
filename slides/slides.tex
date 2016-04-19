@@ -177,28 +177,28 @@ UNM}
 \section{Introduction}
 
 
-\subsection{History of Neutrinos}
+% \subsection{History of Neutrinos}
 
-\begin{frame}[fragile]{Neutrino Timeline}
-
-
-\begin{vtimeline}[description={text width=\textwidth}, 
- row sep=2ex, 
- use timeline header,
- timeline title={History of Neutrino (Partial)}]
-1930 & Pauli, letter to ``Radioactive Ladies and Gentlemen"\endlr
-1933 & Fermi, the name ``neutrino" \endlr
-1956 & Reines \& Cowan, reactor neutrinos \endlr
-%1957 & Pontecorvo, theory of neutrino oscillations \endlr
-1968 & Homestake, solar neutrinos \endlr
-%1969 & Gribov \& Pontecorvo, solar neutrino oscillations \endlr
-1978 \& 1985 & Mikheyev--Smirnov--Wolfenstein (MSW) effect \endlr
-1987 & SN1987A neutrinos $\sim$ 20 events\endlr
-1998 \& 2001 & Super--Kamiokande \& SNO, neutrino oscillations \endlr
-\end{vtimeline}
+% \begin{frame}[fragile]{Neutrino Timeline}
 
 
-\end{frame}
+% \begin{vtimeline}[description={text width=\textwidth}, 
+%  row sep=2ex, 
+%  use timeline header,
+%  timeline title={History of Neutrino (Partial)}]
+% 1930 & Pauli, letter to ``Radioactive Ladies and Gentlemen"\endlr
+% 1933 & Fermi, the name ``neutrino" \endlr
+% 1956 & Reines \& Cowan, reactor neutrinos \endlr
+% %1957 & Pontecorvo, theory of neutrino oscillations \endlr
+% 1968 & Homestake, solar neutrinos \endlr
+% %1969 & Gribov \& Pontecorvo, solar neutrino oscillations \endlr
+% 1978 \& 1985 & Mikheyev--Smirnov--Wolfenstein (MSW) effect \endlr
+% 1987 & SN1987A neutrinos $\sim$ 20 events\endlr
+% 1998 \& 2001 & Super--Kamiokande \& SNO, neutrino oscillations \endlr
+% \end{vtimeline}
+
+
+% \end{frame}
 
 
 
@@ -496,13 +496,15 @@ P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin
 \centering
 \begin{minipage}[b]{0.5\linewidth}
 \centering
-\includegraphics[height=0.42\textheight]{assets/charged-current.png}
-\caption*{Charged current interaction between $\nu_{\mathrm e}$ and $e^{-}$}
+\includegraphics[height=0.42\textheight]{assets/neutral-current.png}
+\caption*{Neutral current interaction between\\
+$\nu_{\mathrm e}$, $\nu_{\mu}$, $\nu_{\tau}$, \\
+and $e^{-}$, quarks and antiquarks.}
 \end{minipage}%
 \begin{minipage}[b]{0.5\linewidth}
 \centering
-\includegraphics[height=0.42\textheight]{assets/neutral-current.png}
-\caption*{Neutral current interaction between $\nu_{\mathrm e}$, $\nu_{\mu}$, $\nu_{\tau}$, and $e^{-}$, quarks and antiquarks.}
+\includegraphics[height=0.42\textheight]{assets/charged-current.png}
+\caption*{Charged current interaction between $\nu_{\mathrm e}$ and $e^{-}$}
 \end{minipage}
 \end{figure}
 
@@ -713,6 +715,7 @@ where
 
 \begin{frame}{MSW Effect}
 
+Constant matter profile $\lambda_0$ as an example,
 
 \begin{tcolorbox}[title=Significance of $\theta_{\mathrm{m}}$]
 
@@ -754,40 +757,40 @@ In matter basis
 
 
 
-\begin{frame}{MSW Effect}
+% \begin{frame}{MSW Effect}
 
-For constant matter profile $\lambda_0$
-
-
-
-\begin{equation*}
-P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_\mu})  =  {\color{blue}\sin^2(2\theta_{\mathrm{m}})} \sin^2 \left( {\color{red}\omega_{\mathrm{m}}} x \right)
-\end{equation*}
-
-\only<1-1>{
-where
-\begin{align*}
-    {\color{red}\omega_{\mathrm{m}}(x) } = & ~\sqrt{ \left(\lambda - \omega_{\mathrm{v}}\cos 2\theta_{\mathrm{v}} \right)^2 + \omega_{\mathrm{v}}^2 \sin^2 2\theta_{\mathrm{v}}  } ,\\
-    {\color{blue}\tan 2\theta_{\mathrm{m}}} = & ~\frac{\omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}  }{ \cos 2\theta_{\mathrm{v}}\omega_{\mathrm{v}} - \lambda  } .
-\end{align*}
-}
+% For constant matter profile $\lambda_0$
 
 
 
-
-% \only<2->{
-% \begin{itemize}
-%     \item Oscillation amplitude depends on $\theta_{\mathrm{m}}$
-%     \item Oscillation angular frequency is
 % \begin{equation*}
-%     \omega_{\mathrm{m}} \geq \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}
+% P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_\mu})  =  {\color{blue}\sin^2(2\theta_{\mathrm{m}})} \sin^2 \left( {\color{red}\omega_{\mathrm{m}}} x \right)
 % \end{equation*}
 
-% \end{itemize}
+% \only<1-1>{
+% where
+% \begin{align*}
+%     {\color{red}\omega_{\mathrm{m}}(x) } = & ~\sqrt{ \left(\lambda - \omega_{\mathrm{v}}\cos 2\theta_{\mathrm{v}} \right)^2 + \omega_{\mathrm{v}}^2 \sin^2 2\theta_{\mathrm{v}}  } ,\\
+%     {\color{blue}\tan 2\theta_{\mathrm{m}}} = & ~\frac{\omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}  }{ \cos 2\theta_{\mathrm{v}}\omega_{\mathrm{v}} - \lambda  } .
+% \end{align*}
 % }
 
 
-\end{frame}
+
+
+% % \only<2->{
+% % \begin{itemize}
+% %     \item Oscillation amplitude depends on $\theta_{\mathrm{m}}$
+% %     \item Oscillation angular frequency is
+% % \begin{equation*}
+% %     \omega_{\mathrm{m}} \geq \omega_{\mathrm{v}} \sin 2\theta_{\mathrm{v}}
+% % \end{equation*}
+
+% % \end{itemize}
+% % }
+
+
+% \end{frame}
 
 
 
@@ -894,6 +897,13 @@ P(\ket{\nu_{\mathrm{e}}}\to\ket{\nu_\mu})  =  \sin^2(2\theta_{\mathrm{m}}) \sin^
 \ket{\nu_{\mathrm{L}}} \\
 \ket{\nu_{\mathrm{H}}}
 \end{pmatrix}
+\end{equation*}
+
+
+
+
+\begin{equation*}
+    \mathbf{H}_{\text{matter-basis}} = -\frac{\omega_{\mathrm m}}{2}\boldsymbol{\sigma_3}
 \end{equation*}
 
 
